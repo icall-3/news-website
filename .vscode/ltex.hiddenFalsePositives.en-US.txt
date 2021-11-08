@@ -1,0 +1,1 @@
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QSOFTWARE REQUIREMENTS SPECIFICATION\nName of The Application: News Website\nversion 0.1\nDeveloped by:\n- Buciuman Daria\n- Mali Attila Szabolcs\n- Nechita Razvan\n- Viman Paul\\E$"}
