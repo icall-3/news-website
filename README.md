@@ -4,5 +4,5 @@
 
 ### YOU CAN FORGET ABOUT NEW YORK TIMES
 
-You get all your up-to-date news from the newsapi.org service
+You get all your up-to-date news from the newsapi.org service.  
 Will update with future features.
