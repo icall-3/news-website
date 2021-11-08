@@ -24,14 +24,11 @@ App description:
     Make a reliable and free news source for the people of the internet.
 
 ## 1.2 Intended audience
-<<<<<<< HEAD
    Ages: Open for everyone, no age restriction.  
    The app is inteneded for personal use, with free of any taxes, no commercial activites are permitted.  
-=======
 
 Everyone.
 
 ## 1.3 Intended use
 
 Read news from all around the world.
->>>>>>> dbccffb72e7565a426f8ef216c2aa968bc56e6d5
