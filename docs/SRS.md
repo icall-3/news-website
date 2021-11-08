@@ -15,3 +15,4 @@
     Make a reliable and free news source for the people of the internet.
 
 ## 1.2 Intended audience
+   Everyone.
