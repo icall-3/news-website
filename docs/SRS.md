@@ -15,4 +15,5 @@
     Make a reliable and free news source for the people of the internet.
 
 ## 1.2 Intended audience
-   Everyone.
+   Ages: Open for everyone, no age restriction.  
+   The app is inteneded for personal use, with free of any taxes, no commercial activites are permitted.  
