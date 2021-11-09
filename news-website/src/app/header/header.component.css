@@ -1,19 +1,23 @@
 .header {
   width: 100%;
-  padding-top: 0px;
-  padding-bottom: 2px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   padding-right: 20px;
   margin: -10px;
-  /* margin-right: -10px; */
+  margin-bottom: 0;
   background-color: black;
-  background-image: url("src/assets/background.jpg");
+  background-image: url("src/assets/background2.jpg");
   background-size: cover;
   background-position: 50% 42%;
 }
 h1 {
-  color: blue;
+  color: rgb(243, 243, 243);
+  text-shadow: #000 0px 0px 2px;
+  -webkit-font-smoothing: antialiased;
   width: max-content;
-  padding-left: 15px;
+  padding-left: 20px;
   font-family: "Times New Roman", Times, serif;
-  font-size: 2vw;
+  font-size: 28px;
+  font-style: normal;
+  letter-spacing: 1px;
 }
