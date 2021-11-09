@@ -24,7 +24,7 @@ App description:
 
 ## 1.2 Intended audience
    Ages: Open for everyone, no age restriction.  
-   The app is inteneded for personal use, with free of any taxes, no commercial activites are permitted.  
+   The app is inteneded for personal use, free of any taxes, no commercial activites are permitted.  
 
 
 ## 1.3 Intended use
