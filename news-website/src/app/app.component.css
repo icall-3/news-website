@@ -1,0 +1,32 @@
+.center-div{
+    margin: 0 auto;
+    padding: 15px;
+    background-color: red;
+}
+
+#contents{
+    overflow: auto;
+    margin: auto;
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+}
+
+#left{
+    width: 25%;
+    margin: 5px;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+#right{
+    width: 25%;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+#main-content{
+    width: 50%;
+    margin: 0px;
+    padding-top: 20px;
+}
