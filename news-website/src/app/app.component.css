@@ -1,32 +1,33 @@
-.center-div{
-    margin: 0 auto;
-    padding: 15px;
-    background-color: red;
+mat-toolbar {
+  background: #004a9f;
+  color: white;
 }
 
-#contents{
-    overflow: auto;
-    margin: auto;
-    margin-bottom: 10px;
-    width: 100%;
+mat-sidenav {
+  margin: 16px;
+  width: 200px;
+  border-right: none;
+  background: #002bc5;
+  color: white;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+mat-sidenav-container {
+  height: calc(100vh - 65px);
+
+}
+
+.content{
+    height: calc(100vh - 98px);
+    margin: 16px;
+    margin-left: 32px;
     display: flex;
-}
+    justify-content: center;
+    align-items: center;
 
-#left{
-    width: 25%;
-    margin: 5px;
-    padding: 5px;
-    margin-top: 20px;
-}
-
-#right{
-    width: 25%;
-    padding: 5px;
-    margin-top: 20px;
-}
-
-#main-content{
-    width: 50%;
-    margin: 0px;
-    padding-top: 20px;
+    font-size: 2rem;
+    color: lightgray;
+    border-radius: 10px;
 }
