@@ -56,3 +56,10 @@ mat-sidenav-container {
     position: sticky;
   }
 }
+@media (max-width: 500px) {
+  .dashboard {
+    background-color: red;
+    margin-bottom: 0;
+    position: sticky;
+  }
+}
