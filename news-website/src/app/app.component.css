@@ -21,25 +21,38 @@ mat-sidenav-container {
 }
 .dashboard {
   background-color: #4b4b4b;
+  height: 100vh;
 }
 .content {
   position: fixed;
   height: calc(100vh - 98px);
   margin: 16px;
   margin-left: 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 2%;
-  padding-bottom: 2%;
-
-  overflow-x: hidden;
-  overflow-y: scroll;
   display: block;
+  padding-top: 1%;
+  padding-bottom: 2%;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  min-height: 200px;
+  max-height: calc(100vh - 98px);
 
   font-size: 2rem;
   color: lightgray;
   background-color: #383838;
   border-radius: 20px;
-  border-color: #ffffff;
+}
+.content > h1 {
+  font-family: "Times New Roman", Times, serif;
+  padding-left: 2%;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 20px;
+}
+@media (max-width: 500px) {
+  .dashboard {
+    background-color: red;
+    margin-bottom: 0;
+    position: sticky;
+  }
 }
