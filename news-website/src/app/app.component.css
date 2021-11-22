@@ -1,13 +1,14 @@
 .toolbar {
   background: #1d1d1d;
   color: white;
+  overflow: hidden;
 }
 .toolbar > h1 {
   font-family: "Times New Roman", Times, serif;
 }
 mat-sidenav {
   margin: 16px;
-  width: 200px;
+  width: 12.5%;
   border-right: none;
   background: #7c7c7c;
   color: white;
@@ -21,21 +22,17 @@ mat-sidenav-container {
 }
 .dashboard {
   background-color: #4b4b4b;
-  height: 100vh;
 }
 .content {
-  position: fixed;
-  height: calc(100vh - 98px);
+  height: calc(100vh - 150px);
   margin: 16px;
-  margin-left: 32px;
+  margin-left: 5%;
+  right: 5%;
   display: block;
   padding-top: 1%;
   padding-bottom: 2%;
   overflow-x: hidden;
   overflow-y: auto;
-
-  min-height: 200px;
-  max-height: calc(100vh - 98px);
 
   font-size: 2rem;
   color: lightgray;
@@ -49,11 +46,13 @@ mat-sidenav-container {
   padding-bottom: 0;
   font-size: 20px;
 }
-@media (max-width: 500px) {
-  .dashboard {
-    background-color: red;
-    margin-bottom: 0;
-    position: sticky;
+@media (max-width: 800px) {
+  .content {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .mat-sidenav {
+    width: 50%;
   }
 }
 @media (max-width: 500px) {
