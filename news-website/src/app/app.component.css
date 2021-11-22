@@ -23,12 +23,17 @@ mat-sidenav-container {
   background-color: #4b4b4b;
 }
 .content {
+  position: fixed;
   height: calc(100vh - 98px);
   margin: 16px;
   margin-left: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  overflow-x: hidden;
+  overflow-y: scroll;
 
   font-size: 2rem;
   color: lightgray;
