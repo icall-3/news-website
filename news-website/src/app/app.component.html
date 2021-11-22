@@ -1,8 +1,16 @@
 <mat-toolbar>
-    Very responsive
+    <button mat-icon-button *ngIf="sidenav.mode === 'over' " (click)="sidenav.toggle()">
+        <mat-icon *ngIf="!sidenav.opened">
+            menu
+        </mat-icon>
+        <mat-icon *ngIf="sidenav.opened">
+            close
+        </mat-icon>
+    </button>
+    Daily News
 </mat-toolbar>
 <mat-sidenav-container>
-    <mat-sidenav mode="side" opened>
+    <mat-sidenav #sidenav="matSidenav">
         Hello
     </mat-sidenav>
     <mat-sidenav-content>
