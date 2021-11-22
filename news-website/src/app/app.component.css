@@ -32,8 +32,10 @@ mat-sidenav-container {
   align-items: center;
   padding-top: 2%;
   padding-bottom: 2%;
+
   overflow-x: hidden;
   overflow-y: scroll;
+  display: block;
 
   font-size: 2rem;
   color: lightgray;
