@@ -1,13 +1,15 @@
-mat-toolbar {
-  background: #004a9f;
+.toolbar {
+  background: #1d1d1d;
   color: white;
 }
-
+.toolbar > h1 {
+  font-family: "Times New Roman", Times, serif;
+}
 mat-sidenav {
   margin: 16px;
   width: 200px;
   border-right: none;
-  background: #002bc5;
+  background: #7c7c7c;
   color: white;
   border-radius: 10px;
   padding: 16px;
@@ -16,18 +18,21 @@ mat-sidenav {
 
 mat-sidenav-container {
   height: calc(100vh - 65px);
-
 }
+.dashboard {
+  background-color: #383838;
+}
+.content {
+  height: calc(100vh - 98px);
+  margin: 16px;
+  margin-left: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-.content{
-    height: calc(100vh - 98px);
-    margin: 16px;
-    margin-left: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 2rem;
-    color: lightgray;
-    border-radius: 10px;
+  font-size: 2rem;
+  color: lightgray;
+  background-color: #383838;
+  border-radius: 20px;
+  border-color: #ffffff;
 }
