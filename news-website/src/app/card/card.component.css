@@ -1,0 +1,20 @@
+.card {
+  font-family: "Times New Roman", Times, serif;
+  border-radius: 20px;
+  outline: solid white;
+  outline-width: 1px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+.card:hover {
+  transform: translateY(-0.5%);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
+}
+.title > h1 {
+  margin-top: 5px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+.description {
+  font-size: 16px;
+}
