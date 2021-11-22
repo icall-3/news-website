@@ -1,21 +1,17 @@
 <mat-toolbar>
-    <button mat-icon-button *ngIf="sidenav.mode === 'over' " (click)="sidenav.toggle()">
-        <mat-icon *ngIf="!sidenav.opened">
-            menu
-        </mat-icon>
-        <mat-icon *ngIf="sidenav.opened">
-            close
-        </mat-icon>
-    </button>
-    Daily News
+  <button
+    mat-icon-button
+    *ngIf="sidenav.mode === 'over'"
+    (click)="sidenav.toggle()"
+  >
+    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+  </button>
+  Daily News
 </mat-toolbar>
 <mat-sidenav-container>
-    <mat-sidenav #sidenav="matSidenav">
-        Hello
-    </mat-sidenav>
-    <mat-sidenav-content>
-        <div class="content mat-elevation-z4">
-            Main Content Here
-        </div>
-    </mat-sidenav-content>
-</mat-sidenav-container> 
+  <mat-sidenav #sidenav="matSidenav"> Hello </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z4">Main Content Here</div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
