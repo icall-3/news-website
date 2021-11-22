@@ -26,14 +26,13 @@ mat-sidenav-container {
 .content {
   height: calc(100vh - 150px);
   margin: 16px;
-  margin-left: 15%;
+  margin-left: 5%;
   right: 5%;
   display: block;
   padding-top: 1%;
   padding-bottom: 2%;
   overflow-x: hidden;
   overflow-y: auto;
-  max-height: calc(100vh - 98px);
 
   font-size: 2rem;
   color: lightgray;
@@ -51,5 +50,8 @@ mat-sidenav-container {
   .content {
     margin-left: 2%;
     margin-right: 2%;
+  }
+  .mat-sidenav {
+    width: 50%;
   }
 }
