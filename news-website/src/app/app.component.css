@@ -5,6 +5,7 @@
 }
 .toolbar > h1 {
   font-family: "Times New Roman", Times, serif;
+  cursor: pointer;
 }
 mat-sidenav {
   margin: 16px;
@@ -52,6 +53,6 @@ mat-sidenav-container {
     margin-right: 2%;
   }
   .mat-sidenav {
-    width: 50%;
+    width: 35%;
   }
 }
