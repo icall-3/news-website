@@ -5,6 +5,7 @@
 }
 .toolbar > h1 {
   font-family: "Times New Roman", Times, serif;
+  cursor: pointer;
 }
 mat-sidenav {
   margin: 16px;
