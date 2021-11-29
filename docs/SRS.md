@@ -34,4 +34,4 @@ App description:
 
 ### 1.4 Scope
 
-- Centralize all kind of news in different languages into one accessible and organized place.
+- Centralize new information from various and reliable sources and make it available for people in an organized and distinguished way
