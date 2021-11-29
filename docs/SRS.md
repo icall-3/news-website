@@ -6,13 +6,13 @@
 
 ### Developed by:
 
-> #### - Buciuman Daria
->
-> #### - Mali Attila Szabolcs
->
-> #### - Nechita Razvan
->
-> #### - Viman Paul
+#### - Buciuman Daria
+
+#### - Mali Attila Szabolcs
+
+#### - Nechita Razvan
+
+#### - Viman Paul
 
 ## 1. Introduction
 
