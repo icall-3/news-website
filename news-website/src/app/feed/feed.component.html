@@ -1,10 +1,7 @@
 <div class="feed">
   <div class="cards">
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
+    <div *ngFor="let article of articles | async">
+      <app-card [article]="article"></app-card>
+    </div>
   </div>
 </div>

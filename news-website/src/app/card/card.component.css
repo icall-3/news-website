@@ -10,6 +10,12 @@
   transform: translateY(-0.5%);
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
 }
+.title {
+  cursor: pointer;
+}
+.title:hover {
+  text-decoration: underline;
+}
 .title > h1 {
   margin-top: 5px;
   font-family: "Times New Roman", Times, serif;
@@ -17,4 +23,8 @@
 }
 .description {
   font-size: 16px;
+}
+.card-img {
+  max-width: 40%;
+  max-height: 40%;
 }
