@@ -17,9 +17,11 @@ export class AppComponent {
   ngAfterViewInit() {
     this.observer.observe(['(max-width: 800px)']).subscribe((res) => {
       if (res.matches) {
+        console.log('shoudl be closed');
         this.sidenav.mode = 'over';
         this.sidenav.close();
       } else {
+        console.log('shoudlnt be closed');
         this.sidenav.mode = 'side';
         this.sidenav.open();
       }

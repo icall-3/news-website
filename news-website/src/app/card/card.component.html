@@ -1,13 +1,12 @@
 <div class="card">
-  <div class="title">
-    <h1>Card</h1>
+  <div class="title" (click)="openUrl(article.url)">
+    <h1>{{ article.title }}</h1>
   </div>
+  <img class="card-img" [src]="article.urlToImage" />
   <div class="description">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius porro
-      repudiandae magni ea natus soluta distinctio expedita doloribus est
-      corporis veniam fugit quibusdam, ex pariatur velit beatae suscipit aut
-      modi.
-    </p>
+    <p>{{ article.description }}</p>
+    <p>Source: {{ article.author }}</p>
+    <p>{{ article.publishedAt | date }}</p>
   </div>
+  <div class="extra"></div>
 </div>
