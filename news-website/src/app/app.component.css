@@ -20,6 +20,7 @@ mat-sidenav {
 
 mat-sidenav-container {
   height: calc(100vh - 65px);
+  overflow: hidden;
 }
 .dashboard {
   background-color: #4b4b4b;

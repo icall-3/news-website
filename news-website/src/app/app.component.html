@@ -10,7 +10,9 @@
   <h1 onClick="window.location.href=window.location.href">Daily News</h1>
 </mat-toolbar>
 <mat-sidenav-container class="dashboard">
-  <mat-sidenav #sidenav="matSidenav"> Hello </mat-sidenav>
+  <mat-sidenav #sidenav="matSidenav">
+    <app-categories></app-categories>
+  </mat-sidenav>
   <mat-sidenav-content>
     <div class="content mat-elevation-z4">
       <h1>Newest news</h1>

@@ -1,0 +1,32 @@
+.categories {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+img {
+  width: 20%;
+  height: 20%;
+  padding-right: 5px;
+}
+
+.icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 0.9375rem;
+}
+p {
+  font-size: 18px;
+}
+
+@media (max-width: 800px) {
+  p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 400px) {
+  p {
+    font-size: 11px;
+  }
+}
