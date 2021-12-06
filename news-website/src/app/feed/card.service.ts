@@ -17,11 +17,13 @@ export class CardService {
   }
 
   public changeUrl(newUrl: string): void {
-    this.url = newUrl;
-    console.log('category' + this.url);
+    sessionStorage.setItem('newUrl', newUrl);
   }
 
   public getEverything(): Observable<NewsResponse> {
+    if (sessionStorage.getItem('newUrl') != null) {
+      this.url = sessionStorage.getItem('newUrl');
+    }
     return this.http.get<NewsResponse>(this.url);
   }
 }
