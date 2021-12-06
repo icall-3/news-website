@@ -17,6 +17,7 @@ mat-sidenav {
   border-radius: 10px;
   padding: 16px;
   text-align: center;
+  height: 93%;
 }
 
 mat-sidenav-container {
@@ -25,10 +26,12 @@ mat-sidenav-container {
 }
 .dashboard {
   background-color: #4b4b4b;
-  height: 90%;
+  position: sticky;
+  height: 93%;
 }
 .content {
-  height: calc(100vh - 150px);
+  /* height: calc(100vh - 180px);*/
+  height: 87.2%;
   margin: 16px;
   margin-left: 5%;
   right: 5%;
