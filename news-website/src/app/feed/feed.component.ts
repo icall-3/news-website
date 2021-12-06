@@ -1,3 +1,4 @@
+import { SearchService } from './../search.service';
 import { Component, OnInit } from '@angular/core';
 import { NewsResponse } from 'src/interfaces/NewsResponse';
 import { CardService } from './card.service';
@@ -19,7 +20,13 @@ export class FeedComponent implements OnInit {
       })
     );
 
-  constructor(private cardService: CardService) {}
+  public searchedArticles: Observable<Article[]> = this.searchService.search(
+    this.articles
+  );
+  constructor(
+    private cardService: CardService,
+    private searchService: SearchService
+  ) {}
 
   ngOnInit(): void {
     this.articles = this.cardService.getEverything().pipe(

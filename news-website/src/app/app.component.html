@@ -8,6 +8,13 @@
     <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
   </button>
   <h1 (click)="homeButton()">Daily News</h1>
+  <input
+    id="searchBar"
+    type="text"
+    class="searchBar"
+    placeholder="Search..."
+    (keyup)="onChange($event)"
+  />
 </mat-toolbar>
 
 <mat-sidenav-container class="dashboard">

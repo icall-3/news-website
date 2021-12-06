@@ -2,6 +2,7 @@ import { CardService } from './feed/card.service';
 import { Component, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { BreakpointObserver } from '@angular/cdk/layout';
+import { SearchService } from './search.service';
 
 @Component({
   selector: 'app-root',
@@ -15,17 +16,16 @@ export class AppComponent {
 
   constructor(
     private observer: BreakpointObserver,
-    private cardService: CardService
+    private cardService: CardService,
+    private searchService: SearchService
   ) {}
 
   ngAfterViewInit() {
     this.observer.observe(['(max-width: 1450px)']).subscribe((res) => {
       if (res.matches) {
-        console.log('shoudl be closed');
         this.sidenav.mode = 'over';
         this.sidenav.close();
       } else {
-        console.log('shoudlnt be closed');
         this.sidenav.mode = 'side';
         this.sidenav.open();
       }
@@ -41,7 +41,13 @@ export class AppComponent {
 
   public getCategory(): string {
     var category = this.cardService.getUrl().split(/&category=|&/);
-    console.log(category[1]);
     return category[1];
+  }
+
+  public onChange(event: Event): void {
+    const target = event.target;
+    const value = (target as any).value;
+    console.log(value);
+    this.searchService.searchTermObs.next(value);
   }
 }
