@@ -20,6 +20,7 @@ import { CategoriesComponent } from './categories/categories.component';
   declarations: [
     AppComponent,
     HeaderComponent,
+    CardComponent,
     FooterComponent,
     FeedComponent,
     CardComponent,
