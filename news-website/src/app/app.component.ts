@@ -1,3 +1,4 @@
+import { CardService } from './feed/card.service';
 import { Component, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { BreakpointObserver } from '@angular/cdk/layout';
@@ -12,10 +13,13 @@ export class AppComponent {
 
   @ViewChild(MatSidenav) sidenav!: MatSidenav;
 
-  constructor(private observer: BreakpointObserver) {}
+  constructor(
+    private observer: BreakpointObserver,
+    private cardService: CardService
+  ) {}
 
   ngAfterViewInit() {
-    this.observer.observe(['(max-width: 800px)']).subscribe((res) => {
+    this.observer.observe(['(max-width: 1450px)']).subscribe((res) => {
       if (res.matches) {
         console.log('shoudl be closed');
         this.sidenav.mode = 'over';
@@ -26,5 +30,18 @@ export class AppComponent {
         this.sidenav.open();
       }
     });
+  }
+
+  public homeButton(): void {
+    this.cardService.changeUrl(
+      'https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=ca343f5fb14c4fe9946c2af070bdf527'
+    );
+    window.location.reload();
+  }
+
+  public getCategory(): string {
+    var category = this.cardService.getUrl().split(/&category=|&/);
+    console.log(category[1]);
+    return category[1];
   }
 }

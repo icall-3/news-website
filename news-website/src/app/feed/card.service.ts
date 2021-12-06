@@ -8,7 +8,7 @@ import { NewsResponse } from 'src/interfaces/NewsResponse';
 })
 export class CardService {
   private url: string =
-    'https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=ca343f5fb14c4fe9946c2af070bdf527';
+    'https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=ca343f5fb14c4fe9946c2af070bdf527';
 
   constructor(private http: HttpClient) {}
 
@@ -16,7 +16,14 @@ export class CardService {
     return this.url;
   }
 
+  public changeUrl(newUrl: string): void {
+    sessionStorage.setItem('newUrl', newUrl);
+  }
+
   public getEverything(): Observable<NewsResponse> {
+    if (sessionStorage.getItem('newUrl') != null) {
+      this.url = sessionStorage.getItem('newUrl');
+    }
     return this.http.get<NewsResponse>(this.url);
   }
 }

@@ -14,6 +14,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { FeedComponent } from './feed/feed.component';
 import { CardComponent } from './card/card.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CategoriesComponent } from './categories/categories.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     FeedComponent,
     CardComponent,
+    CategoriesComponent,
   ],
   imports: [
     BrowserModule,
