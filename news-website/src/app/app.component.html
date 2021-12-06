@@ -9,14 +9,18 @@
   </button>
   <h1 (click)="homeButton()">Daily News</h1>
 </mat-toolbar>
+
 <mat-sidenav-container class="dashboard">
   <mat-sidenav #sidenav="matSidenav">
     <app-categories></app-categories>
   </mat-sidenav>
+
   <mat-sidenav-content>
     <div class="content mat-elevation-z4">
       <h1>{{ getCategory() | titlecase }}</h1>
+
       <app-feed></app-feed>
     </div>
+    <app-spinner></app-spinner>
   </mat-sidenav-content>
 </mat-sidenav-container>
