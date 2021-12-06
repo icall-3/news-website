@@ -15,6 +15,7 @@ import { FeedComponent } from './feed/feed.component';
 import { CardComponent } from './card/card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CategoriesComponent } from './categories/categories.component';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -23,8 +24,8 @@ import { CategoriesComponent } from './categories/categories.component';
     CardComponent,
     FooterComponent,
     FeedComponent,
-    CardComponent,
     CategoriesComponent,
+    SpinnerComponent,
   ],
   imports: [
     BrowserModule,
