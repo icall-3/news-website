@@ -2,6 +2,7 @@
   background: #1d1d1d;
   color: white;
   overflow: hidden;
+  height: 10%;
 }
 .toolbar > h1 {
   font-family: "Times New Roman", Times, serif;
@@ -24,6 +25,7 @@ mat-sidenav-container {
 }
 .dashboard {
   background-color: #4b4b4b;
+  height: 90%;
 }
 .content {
   height: calc(100vh - 150px);
@@ -55,5 +57,10 @@ mat-sidenav-container {
   }
   .mat-sidenav {
     width: 35%;
+  }
+}
+@media (max-width: 1500px) {
+  mat-sidenav {
+    width: 20%;
   }
 }

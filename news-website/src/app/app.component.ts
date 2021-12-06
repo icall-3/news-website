@@ -15,7 +15,7 @@ export class AppComponent {
   constructor(private observer: BreakpointObserver) {}
 
   ngAfterViewInit() {
-    this.observer.observe(['(max-width: 800px)']).subscribe((res) => {
+    this.observer.observe(['(max-width: 1450px)']).subscribe((res) => {
       if (res.matches) {
         console.log('shoudl be closed');
         this.sidenav.mode = 'over';
