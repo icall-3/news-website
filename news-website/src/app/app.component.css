@@ -39,7 +39,6 @@ mat-sidenav-container {
   height: 93%;
 }
 .content {
-  /* height: calc(100vh - 180px);*/
   height: 87.2%;
   margin: 16px;
   margin-left: 5%;
