@@ -3,6 +3,15 @@
   color: white;
   overflow: hidden;
   height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
 }
 .toolbar > h1 {
   font-family: "Times New Roman", Times, serif;
@@ -17,6 +26,7 @@ mat-sidenav {
   border-radius: 10px;
   padding: 16px;
   text-align: center;
+  height: 93%;
 }
 
 mat-sidenav-container {
@@ -25,10 +35,11 @@ mat-sidenav-container {
 }
 .dashboard {
   background-color: #4b4b4b;
-  height: 90%;
+  position: sticky;
+  height: 93%;
 }
 .content {
-  height: calc(100vh - 150px);
+  height: 87.2%;
   margin: 16px;
   margin-left: 5%;
   right: 5%;
@@ -63,4 +74,13 @@ mat-sidenav-container {
   mat-sidenav {
     width: 20%;
   }
+}
+
+.searchBar {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 200px;
+  height: 25px;
+  border-radius: 8px;
+  padding: 5px;
 }

@@ -1,6 +1,6 @@
 <div class="feed">
   <div class="cards">
-    <div *ngFor="let article of articles | async">
+    <div *ngFor="let article of searchedArticles | async">
       <app-card [article]="article"></app-card>
     </div>
   </div>
