@@ -16,6 +16,11 @@ export class CardService {
     return this.url;
   }
 
+  public changeUrl(newUrl: string): void {
+    this.url = newUrl;
+    console.log('category' + this.url);
+  }
+
   public getEverything(): Observable<NewsResponse> {
     return this.http.get<NewsResponse>(this.url);
   }
