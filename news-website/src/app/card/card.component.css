@@ -1,10 +1,11 @@
 .card {
   font-family: "Times New Roman", Times, serif;
   border-radius: 20px;
-  outline: solid white;
+  outline: solid rgb(0, 0, 0);
   outline-width: 1px;
   padding: 15px;
   margin-bottom: 10px;
+  background-color: #292929;
 }
 .card:hover {
   transform: translateY(-0.5%);
@@ -18,13 +19,41 @@
 }
 .title > h1 {
   margin-top: 5px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "PT Serif", serif;
   font-size: 20px;
+  color: #b55400;
 }
-.description {
+.card-feed {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.card-text {
   font-size: 16px;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .card-img {
   max-width: 40%;
   max-height: 40%;
+}
+.author {
+  font-family: "PT Serif", serif;
+  font-style: normal;
+  color: #757e93;
+  letter-spacing: 1px;
+  font-size: 13px;
+}
+.description {
+  font-family: "PT Serif", serif;
+  font-style: normal;
+  color: #edf2f4;
+}
+.date {
+  font-family: "PT Serif", serif;
+  font-style: italic;
+  justify-content: flex-end;
+  color: #8d99ae;
 }

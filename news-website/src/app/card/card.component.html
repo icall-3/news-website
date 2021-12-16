@@ -2,11 +2,15 @@
   <div class="title" (click)="openUrl(article.url)">
     <h1>{{ article.title }}</h1>
   </div>
-  <img class="card-img" [src]="article.urlToImage" />
-  <div class="description">
-    <p>{{ article.description }}</p>
-    <p>Source: {{ article.author }}</p>
-    <p>{{ article.publishedAt | date }}</p>
+  <div class="card-feed">
+    <img class="card-img" [src]="article.urlToImage" />
+    <div class="card-text">
+      <p class="description">{{ article.description }}</p>
+      <div class="footer">
+        <p class="author">{{ article.author }}</p>
+        <p class="date">{{ article.publishedAt | date }}</p>
+      </div>
+    </div>
   </div>
   <div class="extra"></div>
 </div>

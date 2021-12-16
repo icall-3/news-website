@@ -10,7 +10,7 @@
 .logo {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
 .toolbar > h1 {
@@ -21,7 +21,7 @@ mat-sidenav {
   margin: 16px;
   width: 12.5%;
   border-right: none;
-  background: #7c7c7c;
+  background: #383838;
   color: white;
   border-radius: 10px;
   padding: 16px;
@@ -61,7 +61,7 @@ mat-sidenav-container {
   padding-bottom: 0;
   font-size: 20px;
 }
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .content {
     margin-left: 2%;
     margin-right: 2%;
