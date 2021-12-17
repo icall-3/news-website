@@ -8,7 +8,7 @@ import { NewsResponse } from 'src/interfaces/NewsResponse';
 })
 export class CardService {
   private url: string =
-    'https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=ca343f5fb14c4fe9946c2af070bdf527';
+    'https://newsapi.org/v2/top-headlines?language=es&country=us&category=general&apiKey=ca343f5fb14c4fe9946c2af070bdf527';
 
   constructor(private http: HttpClient) {}
 

@@ -15,6 +15,7 @@ img {
   flex-direction: row;
   align-items: center;
   padding-bottom: 0.9375rem;
+  filter: invert(0%);
 }
 p {
   font-size: 18px;

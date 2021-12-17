@@ -16,6 +16,7 @@ import { CardComponent } from './card/card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CategoriesComponent } from './categories/categories.component';
 import { SpinnerComponent } from './spinner/spinner.component';
+import { LanguagesComponent } from './languages/languages.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { SpinnerComponent } from './spinner/spinner.component';
     FeedComponent,
     CategoriesComponent,
     SpinnerComponent,
+    LanguagesComponent,
   ],
   imports: [
     BrowserModule,

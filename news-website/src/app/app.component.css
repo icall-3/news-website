@@ -84,3 +84,9 @@ mat-sidenav-container {
   border-radius: 8px;
   padding: 5px;
 }
+
+.sidebarContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
