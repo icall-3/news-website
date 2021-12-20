@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LanguagesComponent } from './languages.component';
@@ -8,9 +9,9 @@ describe('LanguagesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LanguagesComponent ]
-    })
-    .compileComponents();
+      imports: [HttpClientModule],
+      declarations: [LanguagesComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
