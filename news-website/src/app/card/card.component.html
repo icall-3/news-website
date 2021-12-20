@@ -1,9 +1,10 @@
 <div class="card">
   <div class="title" (click)="openUrl(article.url)">
-    <h1>{{ article.title }}</h1>
+    <h1>{{ article && article.title }}</h1>
   </div>
   <div class="card-feed">
     <img class="card-img" [src]="article.urlToImage" />
+
     <div class="card-text">
       <p class="description">{{ article.description }}</p>
       <div class="footer">

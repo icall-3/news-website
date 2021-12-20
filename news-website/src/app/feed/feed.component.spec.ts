@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientModule } from '@angular/common/http';
 
 import { FeedComponent } from './feed.component';
 
@@ -8,9 +9,9 @@ describe('FeedComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FeedComponent ]
-    })
-    .compileComponents();
+      imports: [HttpClientModule],
+      declarations: [FeedComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

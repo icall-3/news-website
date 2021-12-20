@@ -12,7 +12,7 @@ import { SearchService } from './search.service';
 export class AppComponent {
   title = 'news-website';
 
-  @ViewChild(MatSidenav) sidenav!: MatSidenav;
+  @ViewChild(MatSidenav) sidenav: MatSidenav;
 
   constructor(
     private observer: BreakpointObserver,
