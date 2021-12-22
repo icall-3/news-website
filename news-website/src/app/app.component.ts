@@ -10,7 +10,7 @@ import { SearchService } from './search.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'news-website';
+  title = 'NewsWebsite';
 
   @ViewChild(MatSidenav) sidenav: MatSidenav;
 
