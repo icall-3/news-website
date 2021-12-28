@@ -23,7 +23,6 @@ mat-sidenav {
   width: 12.5%;
   border-right: none;
   background: #383838;
-  color: white;
   border-radius: 10px;
   padding: 16px;
   text-align: center;
@@ -59,12 +58,22 @@ mat-sidenav-container {
   border-radius: 20px;
 }
 .content > h1 {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Playfair Display", serif;
   padding-left: 2%;
   padding-top: 0;
   padding-bottom: 0;
   font-size: 20px;
   color: #ff084a;
+}
+
+@media (max-width: 500px) {
+  .content {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  mat-sidenav {
+    width: 70%;
+  }
 }
 @media (max-width: 900px) {
   .content {
@@ -73,6 +82,15 @@ mat-sidenav-container {
   }
   .mat-sidenav {
     width: 35%;
+  }
+}
+@media (max-width: 940px) {
+  .content {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .mat-sidenav {
+    width: 23%;
   }
 }
 @media (max-width: 1500px) {
