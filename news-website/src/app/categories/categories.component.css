@@ -17,7 +17,9 @@ img {
   align-items: center;
   padding-bottom: 0.9375rem;
 
-  color: cyan;
+  color: #2389da;
+  color: #70c8e2;
+  font-family: "Playfair Display", serif;
 }
 p {
   color: black;
@@ -26,7 +28,8 @@ p {
 }
 
 p:hover {
-  color: yellow;
+  color: #f41dff;
+  color: #5cb85c;
 }
 
 @media (max-width: 800px) {

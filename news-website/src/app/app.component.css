@@ -12,9 +12,10 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  padding-left: 0.25%;
 }
-.toolbar > h1 {
-  font-family: "Times New Roman", Times, serif;
+.logo > h1 {
+  font-family: "Playfair Display", serif;
   cursor: pointer;
 }
 mat-sidenav {
@@ -63,6 +64,7 @@ mat-sidenav-container {
   padding-top: 0;
   padding-bottom: 0;
   font-size: 20px;
+  color: #ff084a;
 }
 @media (max-width: 900px) {
   .content {
