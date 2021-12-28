@@ -24,3 +24,7 @@ After cloning the project make sure to install all the node modules in the corre
 To run this project navigate with a CLI of your choice into the parent folder of the source code and run the `npm run start` command.
 
 Navigate to `http://localhost:4200/` in a browser of your choice. The app will automatically reload if you change any of the source files.
+
+# Documentation
+
+In order to generate technical documentation we will use the [Compodoc](https://compodoc.app/) tool. To install it, you need to run the `npm install --save-dev @compodoc/compodoc` command in the parent folder of the project. After the installation is complete, just run the `npm run compodoc` command and access `http://127.0.0.1:8080/` in a browser of your choice, where you can find the generated documentation.
