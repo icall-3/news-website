@@ -68,6 +68,13 @@
 </p>
 
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>The component that makes the navigation between categories possible</p>
+
+    </p>
 
 
     <p class="comment">
@@ -135,9 +142,6 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#ngOnInit" >ngOnInit</a>
-                            </li>
-                            <li>
                                     <span class="modifier">Public</span>
                                 <a href="#setUrl" >setUrl</a>
                             </li>
@@ -164,12 +168,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/categories/categories.component.ts:9</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/categories/categories.component.ts:12</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Includes the card service for requesting articles from the right category</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -178,6 +184,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -192,6 +199,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>The service that makes a request to the API</p>
+
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -215,43 +226,6 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="ngOnInit"></a>
-                    <span class="name">
-                        <span ><b>ngOnInit</b></span>
-                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>ngOnInit()</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/app/categories/categories.component.ts:12</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
                     <a name="setUrl"></a>
                     <span class="name">
                         <span class="modifier">Public</span>
@@ -270,14 +244,17 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="14"
-                            class="link-to-prism">src/app/categories/categories.component.ts:14</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">src/app/categories/categories.component.ts:29</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Method to set the url by changing the category to the desired one
+and reloading the page with the new category</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -288,6 +265,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -302,6 +280,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>The category of the news</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -328,16 +310,31 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { CardService } from &#x27;./../feed/card.service&#x27;;
 import { Component, OnInit } from &#x27;@angular/core&#x27;;
 
+/**
+ * The component that makes the navigation between categories possible
+ */
 @Component({
   selector: &#x27;app-categories&#x27;,
   templateUrl: &#x27;./categories.component.html&#x27;,
   styleUrls: [&#x27;./categories.component.css&#x27;],
 })
 export class CategoriesComponent implements OnInit {
+  /**
+   * Includes the card service for requesting articles from the right category
+   * @param cardService The service that makes a request to the API
+   */
   constructor(private cardService: CardService) {}
 
+  /**
+   * @ignore
+   */
   ngOnInit(): void {}
 
+  /**
+   * Method to set the url by changing the category to the desired one
+   * and reloading the page with the new category
+   * @param category The category of the news
+   */
   public setUrl(category: string): void {
     var url &#x3D;
       &#x27;https://newsapi.org/v2/top-headlines?country&#x3D;us&amp;category&#x3D;&#x27; +
