@@ -9,10 +9,7 @@ img {
   padding-right: 5px;
   filter: invert(70%);
 }
-.icon :hover {
-  filter: invert(0%);
-  color: #5cb85c;
-}
+
 .icon {
   display: flex;
   flex-direction: row;
@@ -28,10 +25,12 @@ p {
   padding-left: 0.1rem;
 }
 
-.icon:hover + p + img {
-  color: #f41dff;
+.icon:hover p {
   color: #5cb85c;
+}
+.icon:hover img {
   filter: invert(0%);
+  cursor: pointer;
 }
 
 @media (max-width: 599px) {
