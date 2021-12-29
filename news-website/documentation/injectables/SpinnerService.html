@@ -61,6 +61,13 @@
         </p>
 
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>The service that shows or hides the spinner</p>
+
+            </p>
 
 
 
@@ -116,24 +123,6 @@
     </table>
 </section>
 
-            <section>
-    <h3 id="constructor">Constructor</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-<code>constructor()</code>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/spinner/spinner.service.ts:9</a></div>
-                            </td>
-                        </tr>
-
-            </tbody>
-        </table>
-</section>
 
             <section>
     
@@ -162,17 +151,25 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/app/spinner/spinner.service.ts:12</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="24"
+                            class="link-to-prism">src/app/spinner/spinner.service.ts:24</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Method to pass data about the spinner between other components</p>
+</div>
 
+                    <div>
+                    </div>
                     <div class="io-description">
                         <b>Returns : </b>    <code>Observable&lt;boolean&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>The data about the spinner as an Observable</p>
 
                     </div>
                 </td>
@@ -201,14 +198,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="20"
-                            class="link-to-prism">src/app/spinner/spinner.service.ts:20</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="38"
+                            class="link-to-prism">src/app/spinner/spinner.service.ts:38</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Sets the spinner as hidden by setting the next value of the subject to false</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -240,14 +239,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="16"
-                            class="link-to-prism">src/app/spinner/spinner.service.ts:16</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="31"
+                            class="link-to-prism">src/app/spinner/spinner.service.ts:31</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Sets the spinner as visible by setting the next value of the subject to true</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -282,10 +283,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/spinner/spinner.service.ts:9</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/spinner/spinner.service.ts:14</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Observable to pass data about the spinner to other components</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -298,22 +305,40 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { flatten } from &#x27;@angular/compiler&#x27;;
 import { Injectable } from &#x27;@angular/core&#x27;;
 import { BehaviorSubject, Observable } from &#x27;rxjs&#x27;;
-
+/**
+ * The service that shows or hides the spinner
+ */
 @Injectable({
   providedIn: &#x27;root&#x27;,
 })
 export class SpinnerService {
+  /**
+   * Observable to pass data about the spinner to other components
+   */
   private spinnerObs &#x3D; new BehaviorSubject&lt;boolean&gt;(false);
+  /**
+   * @ignore
+   */
   constructor() {}
 
+  /**
+   * Method to pass data about the spinner between other components
+   * @returns The data about the spinner as an Observable
+   */
   public getSpinnerObs(): Observable&lt;boolean&gt; {
     return this.spinnerObs.asObservable();
   }
 
+  /**
+   * Sets the spinner as visible by setting the next value of the subject to true
+   */
   public show(): void {
     this.spinnerObs.next(true);
   }
 
+  /**
+   * Sets the spinner as hidden by setting the next value of the subject to false
+   */
   public hide(): void {
     this.spinnerObs.next(false);
   }
