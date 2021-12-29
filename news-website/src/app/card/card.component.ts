@@ -54,6 +54,14 @@ export class CardComponent implements OnInit {
   get articleAuthor() {
     return this.article && this.article.author ? this.article.author : '';
   }
+  /**
+   * Get method for the source of the article
+   */
+  get articleSource() {
+    return this.article && this.article.source.name
+      ? this.article.source.name
+      : null;
+  }
 
   /**
    * Get method for the publishing date of the article
