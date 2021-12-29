@@ -52,7 +52,7 @@ export class AppComponent {
   }
 
   /**
-   * Refreshes the page if the title (home button) is clicked"
+   * Refreshes the page if the title (home button) is clicked
    */
   public homeButton(): void {
     this.cardService.changeUrl(
