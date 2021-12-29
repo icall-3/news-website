@@ -5,8 +5,7 @@
   justify-content: space-between;
 }
 img {
-  width: 20%;
-  height: 20%;
+  width: 4ch;
   padding-right: 5px;
   filter: invert(70%);
 }
@@ -16,26 +15,36 @@ img {
   flex-direction: row;
   align-items: center;
   padding-bottom: 0.9375rem;
-
-  color: cyan;
 }
 p {
-  color: black;
+  color: #70c8e2;
+  font-family: "Playfair Display", serif;
   font-size: 18px;
+  cursor: pointer;
+  padding-top: 0.6rem;
+  padding-left: 0.1rem;
+}
+
+.icon:hover p {
+  color: #5cb85c;
+}
+.icon:hover img {
+  filter: invert(0%);
   cursor: pointer;
 }
 
-p:hover {
-  color: yellow;
+@media (max-width: 599px) {
+  p {
+    font-size: 11px;
+  }
 }
-
-@media (max-width: 800px) {
+@media only screen and (min-width: 600px) {
   p {
     font-size: 14px;
   }
 }
-@media (max-width: 400px) {
+@media only screen and (min-width: 990px) {
   p {
-    font-size: 11px;
+    font-size: 18px;
   }
 }
