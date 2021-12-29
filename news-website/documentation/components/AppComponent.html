@@ -68,6 +68,13 @@
 </p>
 
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>The main component of the website</p>
+
+    </p>
 
 
 
@@ -183,12 +190,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/app.component.ts:15</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/app.component.ts:24</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Declaration of parameters</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -197,6 +206,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -211,6 +221,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>An observer for checking the width of the webpage</p>
+
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>cardService</td>
@@ -223,6 +237,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>The card service that will be used to extract and display the category of the url</p>
+
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>searchService</td>
@@ -235,6 +253,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>The search service that will be called when there is input in the searchbar</p>
+
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -276,17 +298,25 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="42"
-                            class="link-to-prism">src/app/app.component.ts:42</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="68"
+                            class="link-to-prism">src/app/app.component.ts:68</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Truncates the category from the url string</p>
+</div>
 
+                    <div>
+                    </div>
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>The category of the url</p>
 
                     </div>
                 </td>
@@ -315,14 +345,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="35"
-                            class="link-to-prism">src/app/app.component.ts:35</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="57"
+                            class="link-to-prism">src/app/app.component.ts:57</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Refreshes the page if the title (home button) is clicked&quot;</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -352,14 +384,17 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="23"
-                            class="link-to-prism">src/app/app.component.ts:23</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="42"
+                            class="link-to-prism">src/app/app.component.ts:42</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Decides if the sidebar menu should be displayed or not depending on the width
+of the screen</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -391,14 +426,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="47"
-                            class="link-to-prism">src/app/app.component.ts:47</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="77"
+                            class="link-to-prism">src/app/app.component.ts:77</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Takes the input from the searchbar and calls the search service with that input value</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -409,6 +446,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -423,6 +461,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>An event which takes place in the DOM, in our case the releasing of a key</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -474,10 +516,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/app.component.ts:15</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/app.component.ts:24</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The sidebar category menu</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -505,10 +553,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/app.component.ts:13</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/app.component.ts:19</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The title of the website</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -524,22 +578,41 @@ import { MatSidenav } from &#x27;@angular/material/sidenav&#x27;;
 import { BreakpointObserver } from &#x27;@angular/cdk/layout&#x27;;
 import { SearchService } from &#x27;./search.service&#x27;;
 
+/**
+ * The main component of the website
+ */
 @Component({
   selector: &#x27;app-root&#x27;,
   templateUrl: &#x27;./app.component.html&#x27;,
   styleUrls: [&#x27;./app.component.css&#x27;],
 })
 export class AppComponent {
+  /**
+   The title of the website
+   */
   title &#x3D; &#x27;NewsWebsite&#x27;;
 
+  /**
+   The sidebar category menu
+   */
   @ViewChild(MatSidenav) sidenav: MatSidenav;
 
+  /**
+   *Declaration of parameters
+   * @param observer An observer for checking the width of the webpage
+   * @param cardService The card service that will be used to extract and display the category of the url
+   * @param searchService The search service that will be called when there is input in the searchbar
+   */
   constructor(
     private observer: BreakpointObserver,
     private cardService: CardService,
     private searchService: SearchService
   ) {}
 
+  /**
+   * Decides if the sidebar menu should be displayed or not depending on the width
+   * of the screen
+   */
   ngAfterViewInit() {
     this.observer.observe([&#x27;(max-width: 1450px)&#x27;]).subscribe((res) &#x3D;&gt; {
       if (res.matches) {
@@ -552,6 +625,9 @@ export class AppComponent {
     });
   }
 
+  /**
+   * Refreshes the page if the title (home button) is clicked&quot;
+   */
   public homeButton(): void {
     this.cardService.changeUrl(
       &#x27;https://newsapi.org/v2/top-headlines?country&#x3D;us&amp;category&#x3D;general&amp;apiKey&#x3D;ca343f5fb14c4fe9946c2af070bdf527&#x27;
@@ -559,11 +635,19 @@ export class AppComponent {
     window.location.reload();
   }
 
+  /**
+   * Truncates the category from the url string
+   * @returns The category of the url
+   */
   public getCategory(): string {
     var category &#x3D; this.cardService.getUrl().split(/&amp;category&#x3D;|&amp;/);
     return category[1];
   }
 
+  /**
+   * Takes the input from the searchbar and calls the search service with that input value
+   * @param event An event which takes place in the DOM, in our case the releasing of a key
+   */
   public onChange(event: Event): void {
     const target &#x3D; event.target;
     const value &#x3D; (target as any).value;
@@ -599,13 +683,11 @@ export class AppComponent {
 &lt;mat-sidenav-container class&#x3D;&quot;dashboard&quot;&gt;
   &lt;mat-sidenav #sidenav&#x3D;&quot;matSidenav&quot;&gt;
     &lt;app-categories&gt;&lt;/app-categories&gt;
-    &lt;app-languages&gt;&lt;/app-languages&gt;
   &lt;/mat-sidenav&gt;
 
   &lt;mat-sidenav-content&gt;
     &lt;div class&#x3D;&quot;content mat-elevation-z4&quot;&gt;
       &lt;h1&gt;{{ getCategory() | titlecase }}&lt;/h1&gt;
-
       &lt;app-feed&gt;&lt;/app-feed&gt;
     &lt;/div&gt;
     &lt;app-spinner&gt;&lt;/app-spinner&gt;
@@ -632,17 +714,20 @@ export class AppComponent {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  padding-left: 0.25%;
 }
-.toolbar &gt; h1 {
-  font-family: &quot;Times New Roman&quot;, Times, serif;
+.logo &gt; h1 {
+  font-family: &quot;Playfair Display&quot;, serif;
   cursor: pointer;
+}
+.logo:hover h1 {
+  color: rgb(206, 206, 206);
 }
 mat-sidenav {
   margin: 16px;
   width: 12.5%;
   border-right: none;
   background: #383838;
-  color: white;
   border-radius: 10px;
   padding: 16px;
   text-align: center;
@@ -671,30 +756,54 @@ mat-sidenav-container {
   padding-bottom: 2%;
   overflow-x: hidden;
   overflow-y: auto;
-
-  font-size: 2rem;
+  font-size: 2em;
   color: lightgray;
   background-color: #383838;
   border-radius: 20px;
 }
 .content &gt; h1 {
-  font-family: &quot;Times New Roman&quot;, Times, serif;
+  font-family: &quot;Playfair Display&quot;, serif;
   padding-left: 2%;
   padding-top: 0;
   padding-bottom: 0;
   font-size: 20px;
+  color: #ff084a;
 }
-@media (max-width: 900px) {
-  .content {
-    margin-left: 2%;
-    margin-right: 2%;
-  }
+
+@media only screen and (min-width: 100px) {
   .mat-sidenav {
-    width: 35%;
+    width: 90%;
+  }
+  .content &gt; h1 {
+    font-size: 14px;
   }
 }
-@media (max-width: 1500px) {
-  mat-sidenav {
+@media only screen and (min-width: 300px) {
+  .mat-sidenav {
+    width: 50%;
+  }
+  .content &gt; h1 {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 410px) {
+  .mat-sidenav {
+    width: 40%;
+  }
+  .content &gt; h1 {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 520px) {
+  .mat-sidenav {
+    width: 30%;
+  }
+  .content &gt; h1 {
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 910px) {
+  .mat-sidenav {
     width: 20%;
   }
 }
@@ -702,7 +811,9 @@ mat-sidenav-container {
 .searchBar {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  width: 200px;
+  width: 20%;
+  max-width: 200px;
+  min-width: 100px;
   height: 25px;
   border-radius: 8px;
   padding: 5px;
@@ -735,8 +846,8 @@ mat-sidenav-container {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-toolbar class="toolbar">  <div class="logo">    <button      mat-icon-button      *ngIf="sidenav.mode === \'over\'"      (click)="sidenav.toggle()"    >      <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>      <mat-icon *ngIf="sidenav.opened"> close </mat-icon>    </button>    <h1 (click)="homeButton()">Daily News</h1>  </div>  <input    id="searchBar"    type="text"    class="searchBar"    placeholder="Search..."    (keyup)="onChange($event)"  /></mat-toolbar><mat-sidenav-container class="dashboard">  <mat-sidenav #sidenav="matSidenav">    <app-categories></app-categories>    <app-languages></app-languages>  </mat-sidenav>  <mat-sidenav-content>    <div class="content mat-elevation-z4">      <h1>{{ getCategory() | titlecase }}</h1>      <app-feed></app-feed>    </div>    <app-spinner></app-spinner>  </mat-sidenav-content></mat-sidenav-container></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'CategoriesComponent', 'selector': 'app-categories'},{'name': 'FeedComponent', 'selector': 'app-feed'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LanguagesComponent', 'selector': 'app-languages'},{'name': 'SpinnerComponent', 'selector': 'app-spinner'}];
+        var COMPONENT_TEMPLATE = '<div><mat-toolbar class="toolbar">  <div class="logo">    <button      mat-icon-button      *ngIf="sidenav.mode === \'over\'"      (click)="sidenav.toggle()"    >      <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>      <mat-icon *ngIf="sidenav.opened"> close </mat-icon>    </button>    <h1 (click)="homeButton()">Daily News</h1>  </div>  <input    id="searchBar"    type="text"    class="searchBar"    placeholder="Search..."    (keyup)="onChange($event)"  /></mat-toolbar><mat-sidenav-container class="dashboard">  <mat-sidenav #sidenav="matSidenav">    <app-categories></app-categories>  </mat-sidenav>  <mat-sidenav-content>    <div class="content mat-elevation-z4">      <h1>{{ getCategory() | titlecase }}</h1>      <app-feed></app-feed>    </div>    <app-spinner></app-spinner>  </mat-sidenav-content></mat-sidenav-container></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'CategoriesComponent', 'selector': 'app-categories'},{'name': 'FeedComponent', 'selector': 'app-feed'},{'name': 'SpinnerComponent', 'selector': 'app-spinner'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppComponent'};
 </script>

@@ -68,6 +68,13 @@
 </p>
 
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>The component that displays each article obtained from the API response</p>
+
+    </p>
 
 
     <p class="comment">
@@ -179,12 +186,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/feed/feed.component.ts:25</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/feed/feed.component.ts:34</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Includes the card service and the search service</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -193,6 +202,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -207,6 +217,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>The service that makes a request to the API</p>
+
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>searchService</td>
@@ -219,6 +233,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>The service that searches through the articles</p>
+
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -258,14 +276,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="31"
-                            class="link-to-prism">src/app/feed/feed.component.ts:31</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="49"
+                            class="link-to-prism">src/app/feed/feed.component.ts:49</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Initializes the list of articles with the data obtained from the API response</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -312,10 +332,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/feed/feed.component.ts:15</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/feed/feed.component.ts:21</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The list of articles obtained from the API response</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -346,10 +372,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/feed/feed.component.ts:23</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/feed/feed.component.ts:32</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The articles that matched the input value from the search bar</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -367,12 +399,18 @@ import { map } from &#x27;rxjs/operators&#x27;;
 import { Observable } from &#x27;rxjs&#x27;;
 import { Article } from &#x27;src/interfaces/Article&#x27;;
 
+/**
+ * The component that displays each article obtained from the API response
+ */
 @Component({
   selector: &#x27;app-feed&#x27;,
   templateUrl: &#x27;./feed.component.html&#x27;,
   styleUrls: [&#x27;./feed.component.css&#x27;],
 })
 export class FeedComponent implements OnInit {
+  /**
+   * The list of articles obtained from the API response
+   */
   public articles: Observable&lt;Article[]&gt; &#x3D; this.cardService
     .getEverything()
     .pipe(
@@ -381,14 +419,26 @@ export class FeedComponent implements OnInit {
       })
     );
 
+  /**
+   * The articles that matched the input value from the search bar
+   */
   public searchedArticles: Observable&lt;Article[]&gt; &#x3D; this.searchService.search(
     this.articles
   );
+
+  /**
+   * Includes the card service and the search service
+   * @param cardService The service that makes a request to the API
+   * @param searchService The service that searches through the articles
+   */
   constructor(
     private cardService: CardService,
     private searchService: SearchService
   ) {}
 
+  /**
+   * Initializes the list of articles with the data obtained from the API response
+   */
   ngOnInit(): void {
     this.articles &#x3D; this.cardService.getEverything().pipe(
       map((result: NewsResponse) &#x3D;&gt; {
@@ -452,7 +502,7 @@ export class FeedComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div class="feed">  <div class="cards">    <div *ngFor="let article of searchedArticles | async">      <app-card [article]="article"></app-card>    </div>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'CategoriesComponent', 'selector': 'app-categories'},{'name': 'FeedComponent', 'selector': 'app-feed'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LanguagesComponent', 'selector': 'app-languages'},{'name': 'SpinnerComponent', 'selector': 'app-spinner'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'CategoriesComponent', 'selector': 'app-categories'},{'name': 'FeedComponent', 'selector': 'app-feed'},{'name': 'SpinnerComponent', 'selector': 'app-spinner'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'FeedComponent'};
 </script>

@@ -10,7 +10,9 @@
         {{ articleDescription }}
       </p>
       <div class="footer">
-        <p class="author">{{ articleAuthor }}</p>
+        <p class="author">
+          {{ articleAuthor }} | {{ articleSource | uppercase }}
+        </p>
         <p class="date">
           {{ articlePublishedAt | date }}
         </p>

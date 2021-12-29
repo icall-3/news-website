@@ -61,6 +61,13 @@
         </p>
 
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>The service that makes a request to the API</p>
+
+            </p>
 
 
 
@@ -127,12 +134,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/feed/card.service.ts:11</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/feed/card.service.ts:16</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Includes the HttpClient class for performing API requests</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -141,6 +150,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -155,6 +165,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>A predefined class that performs HTTP requests</p>
+
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -192,14 +206,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="19"
-                            class="link-to-prism">src/app/feed/card.service.ts:19</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="36"
+                            class="link-to-prism">src/app/feed/card.service.ts:36</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Replaces the old url with the new given url</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -210,6 +226,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -224,6 +241,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>The new url</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -263,17 +284,25 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="23"
-                            class="link-to-prism">src/app/feed/card.service.ts:23</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="44"
+                            class="link-to-prism">src/app/feed/card.service.ts:44</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Requests information from the API</p>
+</div>
 
+                    <div>
+                    </div>
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="../interfaces/NewsResponse.html" target="_self" >Observable&lt;NewsResponse&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>The API response as an Observable of NewsResponse type</p>
 
                     </div>
                 </td>
@@ -302,17 +331,25 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="15"
-                            class="link-to-prism">src/app/feed/card.service.ts:15</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="28"
+                            class="link-to-prism">src/app/feed/card.service.ts:28</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Get method for the url</p>
+</div>
 
+                    <div>
+                    </div>
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>The url of the API</p>
 
                     </div>
                 </td>
@@ -350,10 +387,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/feed/card.service.ts:10</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/feed/card.service.ts:15</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The url of the API</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -367,24 +410,45 @@
 import { HttpClient } from &#x27;@angular/common/http&#x27;;
 import { Observable } from &#x27;rxjs&#x27;;
 import { NewsResponse } from &#x27;src/interfaces/NewsResponse&#x27;;
-
+/**
+ * The service that makes a request to the API
+ */
 @Injectable({
   providedIn: &#x27;root&#x27;,
 })
 export class CardService {
+  /**
+   * The url of the API
+   */
   private url: string &#x3D;
     &#x27;https://newsapi.org/v2/top-headlines?country&#x3D;us&amp;category&#x3D;general&amp;apiKey&#x3D;ca343f5fb14c4fe9946c2af070bdf527&#x27;;
 
+  /**
+   * Includes the HttpClient class for performing API requests
+   * @param http A predefined class that performs HTTP requests
+   */
   constructor(private http: HttpClient) {}
 
+  /**
+   * Get method for the url
+   * @returns The url of the API
+   */
   public getUrl(): string {
     return this.url;
   }
 
+  /**
+   * Replaces the old url with the new given url
+   * @param newUrl The new url
+   */
   public changeUrl(newUrl: string): void {
     sessionStorage.setItem(&#x27;newUrl&#x27;, newUrl);
   }
 
+  /**
+   * Requests information from the API
+   * @returns The API response as an Observable of NewsResponse type
+   */
   public getEverything(): Observable&lt;NewsResponse&gt; {
     if (sessionStorage.getItem(&#x27;newUrl&#x27;) !&#x3D; null) {
       this.url &#x3D; sessionStorage.getItem(&#x27;newUrl&#x27;);

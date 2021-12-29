@@ -68,6 +68,13 @@
 </p>
 
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>The card component, every article is displayed in a card</p>
+
+    </p>
 
 
     <p class="comment">
@@ -135,9 +142,6 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#ngOnInit" >ngOnInit</a>
-                            </li>
-                            <li>
                                 <a href="#openUrl" >openUrl</a>
                             </li>
                         </ul>
@@ -180,6 +184,9 @@
                                     <a href="#articleAuthor" >articleAuthor</a>
                                 </li>
                                 <li>
+                                    <a href="#articleSource" >articleSource</a>
+                                </li>
+                                <li>
                                     <a href="#articlePublishedAt" >articlePublishedAt</a>
                                 </li>
                             </ul>
@@ -189,24 +196,6 @@
     </table>
 </section>
 
-    <section>
-    <h3 id="constructor">Constructor</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-<code>constructor()</code>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/card/card.component.ts:10</a></div>
-                            </td>
-                        </tr>
-
-            </tbody>
-        </table>
-</section>
 
     <section>
     <h3 id="inputs">Inputs</h3>
@@ -231,9 +220,15 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/card/card.component.ts:10</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/card/card.component.ts:15</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The article that the card will display</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -245,43 +240,6 @@
     <h3 id="methods">
         Methods
     </h3>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="ngOnInit"></a>
-                    <span class="name">
-                        <span ><b>ngOnInit</b></span>
-                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>ngOnInit()</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="14"
-                            class="link-to-prism">src/app/card/card.component.ts:14</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -302,14 +260,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="16"
-                            class="link-to-prism">src/app/card/card.component.ts:16</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="31"
+                            class="link-to-prism">src/app/card/card.component.ts:31</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Opens the url of the article, redirecting to the page of the article</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -320,6 +280,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -334,6 +295,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>The url of the article</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -373,9 +338,16 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/card/card.component.ts:20</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/card/card.component.ts:38</a></div>
                                 </td>
                             </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Get method for the title of the article</p>
+</div>
+
+                        </td>
+                    </tr>
 
             </tbody>
         </table>
@@ -395,9 +367,16 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/card/card.component.ts:24</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/card/card.component.ts:45</a></div>
                                 </td>
                             </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Get method for the description of the article</p>
+</div>
+
+                        </td>
+                    </tr>
 
             </tbody>
         </table>
@@ -417,9 +396,45 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/card/card.component.ts:30</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/app/card/card.component.ts:54</a></div>
                                 </td>
                             </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Get method for the author of the article</p>
+</div>
+
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="articleSource"></a>
+                        <span class="name"><b>articleSource</b><a href="#articleSource"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>articleSource()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/app/card/card.component.ts:60</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Get method for the source of the article</p>
+</div>
+
+                        </td>
+                    </tr>
 
             </tbody>
         </table>
@@ -439,9 +454,16 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/card/card.component.ts:34</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">src/app/card/card.component.ts:69</a></div>
                                 </td>
                             </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Get method for the publishing date of the article</p>
+</div>
+
+                        </td>
+                    </tr>
 
             </tbody>
         </table>
@@ -452,37 +474,72 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input, OnInit } from &#x27;@angular/core&#x27;;
 import { Article } from &#x27;src/interfaces/Article&#x27;;
-
+/**
+ * The card component, every article is displayed in a card
+ */
 @Component({
   selector: &#x27;app-card&#x27;,
   templateUrl: &#x27;./card.component.html&#x27;,
   styleUrls: [&#x27;./card.component.css&#x27;],
 })
 export class CardComponent implements OnInit {
+  /**
+   * The article that the card will display
+   */
   @Input() article: Article &#x3D; {} as Article;
 
+  /**
+   * @ignore
+   */
   constructor() {}
 
+  /**
+   * @ignore
+   */
   ngOnInit(): void {}
 
+  /**
+   * Opens the url of the article, redirecting to the page of the article
+   * @param url The url of the article
+   */
   openUrl(url: string): void {
     window.open(url);
   }
 
+  /**
+   * Get method for the title of the article
+   */
   get articleTitle() {
     return this.article &amp;&amp; this.article.title ? this.article.title : null;
   }
 
+  /**
+   * Get method for the description of the article
+   */
   get articleDescription() {
     return this.article &amp;&amp; this.article.description
       ? this.article.description
       : null;
   }
 
+  /**
+   * Get method for the author of the article
+   */
   get articleAuthor() {
     return this.article &amp;&amp; this.article.author ? this.article.author : &#x27;&#x27;;
   }
+  /**
+   * Get method for the source of the article
+   */
+  get articleSource() {
+    return this.article &amp;&amp; this.article.source.name
+      ? this.article.source.name
+      : null;
+  }
 
+  /**
+   * Get method for the publishing date of the article
+   */
   get articlePublishedAt() {
     return this.article &amp;&amp; this.article.publishedAt
       ? this.article.publishedAt
@@ -505,7 +562,9 @@ export class CardComponent implements OnInit {
         {{ articleDescription }}
       &lt;/p&gt;
       &lt;div class&#x3D;&quot;footer&quot;&gt;
-        &lt;p class&#x3D;&quot;author&quot;&gt;{{ articleAuthor }}&lt;/p&gt;
+        &lt;p class&#x3D;&quot;author&quot;&gt;
+          {{ articleAuthor }} | {{ articleSource | uppercase }}
+        &lt;/p&gt;
         &lt;p class&#x3D;&quot;date&quot;&gt;
           {{ articlePublishedAt | date }}
         &lt;/p&gt;
@@ -544,7 +603,7 @@ export class CardComponent implements OnInit {
   margin-top: 5px;
   font-family: &quot;PT Serif&quot;, serif;
   font-size: 20px;
-  color: #b55400;
+  color: #ffa31a;
 }
 .card-feed {
   display: flex;
@@ -559,13 +618,16 @@ export class CardComponent implements OnInit {
   justify-content: space-between;
 }
 .card-img {
+  max-width: 50%;
+  max-height: 50%;
+  min-width: 40%;
   max-width: 40%;
-  max-height: 40%;
+  object-fit: cover;
 }
 .author {
   font-family: &quot;PT Serif&quot;, serif;
   font-style: normal;
-  color: #757e93;
+  color: #a1236d;
   letter-spacing: 1px;
   font-size: 13px;
 }
@@ -579,6 +641,47 @@ export class CardComponent implements OnInit {
   font-style: italic;
   justify-content: flex-end;
   color: #8d99ae;
+}
+@media only screen and (max-width: 500px) {
+  .card-feed {
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+  }
+  .card-text {
+    max-width: 100%;
+  }
+  .card-img {
+    min-width: 100%;
+    min-height: 100%;
+    margin-bottom: 5px;
+  }
+  .title &gt; h1 {
+    font-size: 15px;
+  }
+  .description {
+    font-size: 12px;
+  }
+  .author {
+    font-size: 10px;
+  }
+  .date {
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 500px) {
+  .title &gt; h1 {
+    font-size: 18px;
+  }
+  .description {
+    font-size: 14px;
+  }
+  .author {
+    font-size: 12px;
+  }
+  .date {
+    font-size: 14px;
+  }
 }
 </code></pre>
     </div>
@@ -608,8 +711,8 @@ export class CardComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="card">  <div class="title" (click)="openUrl(article.url)">    <h1>{{ articleTitle }}</h1>  </div>  <div class="card-feed">    <img class="card-img" [src]="article.urlToImage" />    <div class="card-text">      <p class="description">        {{ articleDescription }}      </p>      <div class="footer">        <p class="author">{{ articleAuthor }}</p>        <p class="date">          {{ articlePublishedAt | date }}        </p>      </div>    </div>  </div>  <div class="extra"></div></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'CategoriesComponent', 'selector': 'app-categories'},{'name': 'FeedComponent', 'selector': 'app-feed'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LanguagesComponent', 'selector': 'app-languages'},{'name': 'SpinnerComponent', 'selector': 'app-spinner'}];
+        var COMPONENT_TEMPLATE = '<div><div class="card">  <div class="title" (click)="openUrl(article.url)">    <h1>{{ articleTitle }}</h1>  </div>  <div class="card-feed">    <img class="card-img" [src]="article.urlToImage" />    <div class="card-text">      <p class="description">        {{ articleDescription }}      </p>      <div class="footer">        <p class="author">          {{ articleAuthor }} | {{ articleSource | uppercase }}        </p>        <p class="date">          {{ articlePublishedAt | date }}        </p>      </div>    </div>  </div>  <div class="extra"></div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'CategoriesComponent', 'selector': 'app-categories'},{'name': 'FeedComponent', 'selector': 'app-feed'},{'name': 'SpinnerComponent', 'selector': 'app-spinner'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'CardComponent'};
 </script>
