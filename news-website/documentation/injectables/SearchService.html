@@ -61,6 +61,13 @@
         </p>
 
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>The service that searches through the articles</p>
+
+            </p>
 
 
 
@@ -123,12 +130,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/search.service.ts:29</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/search.service.ts:40</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Includes the spinner service for displaying the spinner while the search takes place</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -137,6 +146,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -151,6 +161,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>The service that shows or hides the spinner</p>
+
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -188,14 +202,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="33"
-                            class="link-to-prism">src/app/search.service.ts:33</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="54"
+                            class="link-to-prism">src/app/search.service.ts:54</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Searches through the articles to find the ones whose title matches the desired text</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -206,6 +222,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -220,6 +237,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>The list of articles obtained from the API response</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>term</td>
@@ -232,6 +253,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>The input value from the search bar</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -243,7 +268,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>The articles whose title matched the input from the search bar</p>
+
                     </div>
                 </td>
             </tr>
@@ -271,14 +297,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="20"
-                            class="link-to-prism">src/app/search.service.ts:20</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="31"
+                            class="link-to-prism">src/app/search.service.ts:31</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Shows the spinner while the search takes place, and then returns the matching articles</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -289,6 +317,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -303,6 +332,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>The list of articles obtained from the API response</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -314,7 +347,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>The articles whose title matched the input</p>
+
                     </div>
                 </td>
             </tr>
@@ -345,10 +379,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/search.service.ts:18</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/search.service.ts:24</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The list of articles to be searched, obtained from the API response</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -371,12 +411,23 @@ import {
 } from &#x27;rxjs&#x27;;
 import { Article } from &#x27;src/interfaces/Article&#x27;;
 
+/**
+ * The service that searches through the articles
+ */
 @Injectable({
   providedIn: &#x27;root&#x27;,
 })
 export class SearchService {
+  /**
+   * The list of articles to be searched, obtained from the API response
+   */
   public searchTermObs &#x3D; new BehaviorSubject&lt;string&gt;(undefined);
 
+  /**
+   * Shows the spinner while the search takes place, and then returns the matching articles
+   * @param collectionObs The list of articles obtained from the API response
+   * @returns The articles whose title matched the input
+   */
   public search(collectionObs: Observable&lt;Article[]&gt;): Observable&lt;Article[]&gt; {
     const result &#x3D; this.searchTermObs.pipe(
       distinctUntilChanged(),
@@ -388,8 +439,18 @@ export class SearchService {
     return result;
   }
 
+  /**
+   * Includes the spinner service for displaying the spinner while the search takes place
+   * @param spinnerService The service that shows or hides the spinner
+   */
   constructor(private spinnerService: SpinnerService) {}
 
+  /**
+   * Searches through the articles to find the ones whose title matches the desired text
+   * @param collectionObs The list of articles obtained from the API response
+   * @param term The input value from the search bar
+   * @returns The articles whose title matched the input from the search bar
+   */
   private doSearch(collectionObs: Observable&lt;Article[]&gt;, term: String) {
     return collectionObs.pipe(
       map((articles: Article[]) &#x3D;&gt; {
