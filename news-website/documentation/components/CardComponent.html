@@ -184,6 +184,9 @@
                                     <a href="#articleAuthor" >articleAuthor</a>
                                 </li>
                                 <li>
+                                    <a href="#articleSource" >articleSource</a>
+                                </li>
+                                <li>
                                     <a href="#articlePublishedAt" >articlePublishedAt</a>
                                 </li>
                             </ul>
@@ -410,6 +413,35 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="articleSource"></a>
+                        <span class="name"><b>articleSource</b><a href="#articleSource"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>articleSource()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/app/card/card.component.ts:60</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Get method for the source of the article</p>
+</div>
+
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="articlePublishedAt"></a>
                         <span class="name"><b>articlePublishedAt</b><a href="#articlePublishedAt"><span class="icon ion-ios-link"></span></a></span>
                     </td>
@@ -422,7 +454,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/app/card/card.component.ts:61</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">src/app/card/card.component.ts:69</a></div>
                                 </td>
                             </tr>
                     <tr>
@@ -496,6 +528,14 @@ export class CardComponent implements OnInit {
   get articleAuthor() {
     return this.article &amp;&amp; this.article.author ? this.article.author : &#x27;&#x27;;
   }
+  /**
+   * Get method for the source of the article
+   */
+  get articleSource() {
+    return this.article &amp;&amp; this.article.source.name
+      ? this.article.source.name
+      : null;
+  }
 
   /**
    * Get method for the publishing date of the article
@@ -522,7 +562,9 @@ export class CardComponent implements OnInit {
         {{ articleDescription }}
       &lt;/p&gt;
       &lt;div class&#x3D;&quot;footer&quot;&gt;
-        &lt;p class&#x3D;&quot;author&quot;&gt;{{ articleAuthor }}&lt;/p&gt;
+        &lt;p class&#x3D;&quot;author&quot;&gt;
+          {{ articleAuthor }} | {{ articleSource | uppercase }}
+        &lt;/p&gt;
         &lt;p class&#x3D;&quot;date&quot;&gt;
           {{ articlePublishedAt | date }}
         &lt;/p&gt;
@@ -585,7 +627,7 @@ export class CardComponent implements OnInit {
 .author {
   font-family: &quot;PT Serif&quot;, serif;
   font-style: normal;
-  color: #757e93;
+  color: #a1236d;
   letter-spacing: 1px;
   font-size: 13px;
 }
@@ -669,7 +711,7 @@ export class CardComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="card">  <div class="title" (click)="openUrl(article.url)">    <h1>{{ articleTitle }}</h1>  </div>  <div class="card-feed">    <img class="card-img" [src]="article.urlToImage" />    <div class="card-text">      <p class="description">        {{ articleDescription }}      </p>      <div class="footer">        <p class="author">{{ articleAuthor }}</p>        <p class="date">          {{ articlePublishedAt | date }}        </p>      </div>    </div>  </div>  <div class="extra"></div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="card">  <div class="title" (click)="openUrl(article.url)">    <h1>{{ articleTitle }}</h1>  </div>  <div class="card-feed">    <img class="card-img" [src]="article.urlToImage" />    <div class="card-text">      <p class="description">        {{ articleDescription }}      </p>      <div class="footer">        <p class="author">          {{ articleAuthor }} | {{ articleSource | uppercase }}        </p>        <p class="date">          {{ articlePublishedAt | date }}        </p>      </div>    </div>  </div>  <div class="extra"></div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'CategoriesComponent', 'selector': 'app-categories'},{'name': 'FeedComponent', 'selector': 'app-feed'},{'name': 'SpinnerComponent', 'selector': 'app-spinner'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'CardComponent'};
