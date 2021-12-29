@@ -352,35 +352,40 @@ export class CategoriesComponent implements OnInit {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;categories&quot;&gt;
-  &lt;p class&#x3D;&quot;icon&quot; id&#x3D;&quot;general&quot; (click)&#x3D;&quot;setUrl(&#x27;general&#x27;)&quot;&gt;
+  &lt;div class&#x3D;&quot;icon&quot; id&#x3D;&quot;general&quot; (click)&#x3D;&quot;setUrl(&#x27;general&#x27;)&quot;&gt;
     &lt;img src&#x3D;&quot;/assets/general.png&quot; /&gt;
-    General
-  &lt;/p&gt;
-  &lt;p class&#x3D;&quot;icon&quot; id&#x3D;&quot;business&quot; (click)&#x3D;&quot;setUrl(&#x27;business&#x27;)&quot;&gt;
-    &lt;img src&#x3D;&quot;/assets/business.png&quot; /&gt;
-    Business
-  &lt;/p&gt;
-  &lt;p class&#x3D;&quot;icon&quot; id&#x3D;&quot;entertainment&quot; (click)&#x3D;&quot;setUrl(&#x27;entertainment&#x27;)&quot;&gt;
-    &lt;img src&#x3D;&quot;/assets/entertainment.png&quot; /&gt;
-    Entertainment
-  &lt;/p&gt;
-  &lt;p class&#x3D;&quot;icon&quot; id&#x3D;&quot;health&quot; (click)&#x3D;&quot;setUrl(&#x27;health&#x27;)&quot;&gt;
-    &lt;img src&#x3D;&quot;/assets/health.png&quot; /&gt;
-    Health
-  &lt;/p&gt;
-  &lt;p class&#x3D;&quot;icon&quot; id&#x3D;&quot;science&quot; (click)&#x3D;&quot;setUrl(&#x27;science&#x27;)&quot;&gt;
-    &lt;img src&#x3D;&quot;/assets/science.png&quot; /&gt;
-    Science
-  &lt;/p&gt;
+    &lt;p&gt;General&lt;/p&gt;
+  &lt;/div&gt;
 
-  &lt;p class&#x3D;&quot;icon&quot; id&#x3D;&quot;sports&quot; (click)&#x3D;&quot;setUrl(&#x27;sports&#x27;)&quot;&gt;
+  &lt;div class&#x3D;&quot;icon&quot; id&#x3D;&quot;business&quot; (click)&#x3D;&quot;setUrl(&#x27;business&#x27;)&quot;&gt;
+    &lt;img src&#x3D;&quot;/assets/business.png&quot; /&gt;
+    &lt;p&gt;Business&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class&#x3D;&quot;icon&quot; id&#x3D;&quot;entertainment&quot; (click)&#x3D;&quot;setUrl(&#x27;entertainment&#x27;)&quot;&gt;
+    &lt;img src&#x3D;&quot;/assets/entertainment.png&quot; /&gt;
+    &lt;p&gt;Entertainment&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class&#x3D;&quot;icon&quot; id&#x3D;&quot;health&quot; (click)&#x3D;&quot;setUrl(&#x27;health&#x27;)&quot;&gt;
+    &lt;img src&#x3D;&quot;/assets/health.png&quot; /&gt;
+    &lt;p&gt;Health&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class&#x3D;&quot;icon&quot; id&#x3D;&quot;science&quot; (click)&#x3D;&quot;setUrl(&#x27;science&#x27;)&quot;&gt;
+    &lt;img src&#x3D;&quot;/assets/science.png&quot; /&gt;
+    &lt;p&gt;Science&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class&#x3D;&quot;icon&quot; id&#x3D;&quot;sports&quot; (click)&#x3D;&quot;setUrl(&#x27;sports&#x27;)&quot;&gt;
     &lt;img src&#x3D;&quot;/assets/sports.png&quot; /&gt;
-    Sports
-  &lt;/p&gt;
-  &lt;p class&#x3D;&quot;icon&quot; id&#x3D;&quot;technology&quot; (click)&#x3D;&quot;setUrl(&#x27;technology&#x27;)&quot;&gt;
+    &lt;p&gt;Sports&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class&#x3D;&quot;icon&quot; id&#x3D;&quot;technology&quot; (click)&#x3D;&quot;setUrl(&#x27;technology&#x27;)&quot;&gt;
     &lt;img src&#x3D;&quot;/assets/technology.png&quot; /&gt;
-    Technology
-  &lt;/p&gt;
+    &lt;p&gt;Technology&lt;/p&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
     </div>
@@ -396,8 +401,7 @@ export class CategoriesComponent implements OnInit {
   justify-content: space-between;
 }
 img {
-  width: 20%;
-  height: 20%;
+  width: 4ch;
   padding-right: 5px;
   filter: invert(70%);
 }
@@ -407,27 +411,37 @@ img {
   flex-direction: row;
   align-items: center;
   padding-bottom: 0.9375rem;
-
-  color: cyan;
 }
 p {
-  color: black;
+  color: #70c8e2;
+  font-family: &quot;Playfair Display&quot;, serif;
   font-size: 18px;
+  cursor: pointer;
+  padding-top: 0.6rem;
+  padding-left: 0.1rem;
+}
+
+.icon:hover p {
+  color: #5cb85c;
+}
+.icon:hover img {
+  filter: invert(0%);
   cursor: pointer;
 }
 
-p:hover {
-  color: yellow;
+@media (max-width: 599px) {
+  p {
+    font-size: 11px;
+  }
 }
-
-@media (max-width: 800px) {
+@media only screen and (min-width: 600px) {
   p {
     font-size: 14px;
   }
 }
-@media (max-width: 400px) {
+@media only screen and (min-width: 990px) {
   p {
-    font-size: 11px;
+    font-size: 18px;
   }
 }
 </code></pre>
@@ -458,8 +472,8 @@ p:hover {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="categories">  <p class="icon" id="general" (click)="setUrl(\'general\')">    <img src="/assets/general.png" />    General  </p>  <p class="icon" id="business" (click)="setUrl(\'business\')">    <img src="/assets/business.png" />    Business  </p>  <p class="icon" id="entertainment" (click)="setUrl(\'entertainment\')">    <img src="/assets/entertainment.png" />    Entertainment  </p>  <p class="icon" id="health" (click)="setUrl(\'health\')">    <img src="/assets/health.png" />    Health  </p>  <p class="icon" id="science" (click)="setUrl(\'science\')">    <img src="/assets/science.png" />    Science  </p>  <p class="icon" id="sports" (click)="setUrl(\'sports\')">    <img src="/assets/sports.png" />    Sports  </p>  <p class="icon" id="technology" (click)="setUrl(\'technology\')">    <img src="/assets/technology.png" />    Technology  </p></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'CategoriesComponent', 'selector': 'app-categories'},{'name': 'FeedComponent', 'selector': 'app-feed'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LanguagesComponent', 'selector': 'app-languages'},{'name': 'SpinnerComponent', 'selector': 'app-spinner'}];
+        var COMPONENT_TEMPLATE = '<div><div class="categories">  <div class="icon" id="general" (click)="setUrl(\'general\')">    <img src="/assets/general.png" />    <p>General</p>  </div>  <div class="icon" id="business" (click)="setUrl(\'business\')">    <img src="/assets/business.png" />    <p>Business</p>  </div>  <div class="icon" id="entertainment" (click)="setUrl(\'entertainment\')">    <img src="/assets/entertainment.png" />    <p>Entertainment</p>  </div>  <div class="icon" id="health" (click)="setUrl(\'health\')">    <img src="/assets/health.png" />    <p>Health</p>  </div>  <div class="icon" id="science" (click)="setUrl(\'science\')">    <img src="/assets/science.png" />    <p>Science</p>  </div>  <div class="icon" id="sports" (click)="setUrl(\'sports\')">    <img src="/assets/sports.png" />    <p>Sports</p>  </div>  <div class="icon" id="technology" (click)="setUrl(\'technology\')">    <img src="/assets/technology.png" />    <p>Technology</p>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'CategoriesComponent', 'selector': 'app-categories'},{'name': 'FeedComponent', 'selector': 'app-feed'},{'name': 'SpinnerComponent', 'selector': 'app-spinner'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'CategoriesComponent'};
 </script>

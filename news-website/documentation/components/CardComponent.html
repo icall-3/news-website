@@ -544,7 +544,7 @@ export class CardComponent implements OnInit {
   margin-top: 5px;
   font-family: &quot;PT Serif&quot;, serif;
   font-size: 20px;
-  color: #b55400;
+  color: #ffa31a;
 }
 .card-feed {
   display: flex;
@@ -559,8 +559,11 @@ export class CardComponent implements OnInit {
   justify-content: space-between;
 }
 .card-img {
+  max-width: 50%;
+  max-height: 50%;
+  min-width: 40%;
   max-width: 40%;
-  max-height: 40%;
+  object-fit: cover;
 }
 .author {
   font-family: &quot;PT Serif&quot;, serif;
@@ -579,6 +582,47 @@ export class CardComponent implements OnInit {
   font-style: italic;
   justify-content: flex-end;
   color: #8d99ae;
+}
+@media only screen and (max-width: 500px) {
+  .card-feed {
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+  }
+  .card-text {
+    max-width: 100%;
+  }
+  .card-img {
+    min-width: 100%;
+    min-height: 100%;
+    margin-bottom: 5px;
+  }
+  .title &gt; h1 {
+    font-size: 15px;
+  }
+  .description {
+    font-size: 12px;
+  }
+  .author {
+    font-size: 10px;
+  }
+  .date {
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 500px) {
+  .title &gt; h1 {
+    font-size: 18px;
+  }
+  .description {
+    font-size: 14px;
+  }
+  .author {
+    font-size: 12px;
+  }
+  .date {
+    font-size: 14px;
+  }
 }
 </code></pre>
     </div>
@@ -609,7 +653,7 @@ export class CardComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div class="card">  <div class="title" (click)="openUrl(article.url)">    <h1>{{ articleTitle }}</h1>  </div>  <div class="card-feed">    <img class="card-img" [src]="article.urlToImage" />    <div class="card-text">      <p class="description">        {{ articleDescription }}      </p>      <div class="footer">        <p class="author">{{ articleAuthor }}</p>        <p class="date">          {{ articlePublishedAt | date }}        </p>      </div>    </div>  </div>  <div class="extra"></div></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'CategoriesComponent', 'selector': 'app-categories'},{'name': 'FeedComponent', 'selector': 'app-feed'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LanguagesComponent', 'selector': 'app-languages'},{'name': 'SpinnerComponent', 'selector': 'app-spinner'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'CategoriesComponent', 'selector': 'app-categories'},{'name': 'FeedComponent', 'selector': 'app-feed'},{'name': 'SpinnerComponent', 'selector': 'app-spinner'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'CardComponent'};
 </script>

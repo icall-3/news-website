@@ -54,13 +54,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/AppModule.html" data-type="entity-link" >AppModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-AppModule-96a06bc6d67c74c1db514a5857a082ca8a5985cd54bdbf3788a0b25207c8df78793f87564206e9ce57fceccaeb294720e94da8399aa3cb2ec593844a69f45e78"' : 'data-target="#xs-components-links-module-AppModule-96a06bc6d67c74c1db514a5857a082ca8a5985cd54bdbf3788a0b25207c8df78793f87564206e9ce57fceccaeb294720e94da8399aa3cb2ec593844a69f45e78"' }>
+                                            'data-target="#components-links-module-AppModule-18612256279c1f27b00c8c89c1ab12350cc3d466f112dcbabf764c360bfef841876f5ac6d283857eab2dd9553b2d7db4e696f6b6604a368fbd81a69a37e0249f"' : 'data-target="#xs-components-links-module-AppModule-18612256279c1f27b00c8c89c1ab12350cc3d466f112dcbabf764c360bfef841876f5ac6d283857eab2dd9553b2d7db4e696f6b6604a368fbd81a69a37e0249f"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-96a06bc6d67c74c1db514a5857a082ca8a5985cd54bdbf3788a0b25207c8df78793f87564206e9ce57fceccaeb294720e94da8399aa3cb2ec593844a69f45e78"' :
-                                            'id="xs-components-links-module-AppModule-96a06bc6d67c74c1db514a5857a082ca8a5985cd54bdbf3788a0b25207c8df78793f87564206e9ce57fceccaeb294720e94da8399aa3cb2ec593844a69f45e78"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-18612256279c1f27b00c8c89c1ab12350cc3d466f112dcbabf764c360bfef841876f5ac6d283857eab2dd9553b2d7db4e696f6b6604a368fbd81a69a37e0249f"' :
+                                            'id="xs-components-links-module-AppModule-18612256279c1f27b00c8c89c1ab12350cc3d466f112dcbabf764c360bfef841876f5ac6d283857eab2dd9553b2d7db4e696f6b6604a368fbd81a69a37e0249f"' }>
                                             <li class="link">
                                                 <a href="components/AppComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >AppComponent</a>
                                             </li>
@@ -72,15 +72,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                             </li>
                                             <li class="link">
                                                 <a href="components/FeedComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >FeedComponent</a>
-                                            </li>
-                                            <li class="link">
-                                                <a href="components/FooterComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >FooterComponent</a>
-                                            </li>
-                                            <li class="link">
-                                                <a href="components/HeaderComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >HeaderComponent</a>
-                                            </li>
-                                            <li class="link">
-                                                <a href="components/LanguagesComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >LanguagesComponent</a>
                                             </li>
                                             <li class="link">
                                                 <a href="components/SpinnerComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >SpinnerComponent</a>
