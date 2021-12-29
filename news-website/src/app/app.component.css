@@ -104,44 +104,6 @@ mat-sidenav-container {
   }
 }
 
-/* @media (max-width: 500px) {
-  .content {
-    margin-left: 2%;
-    margin-right: 2%;
-  }
-  mat-sidenav {
-    width: 100%;
-    height: 90%;
-    background-color: red;
-  }
-}
-
-@media (max-width: 900px) {
-  .content {
-    margin-left: 2%;
-    margin-right: 2%;
-  }
-  .mat-sidenav {
-    width: 35%;
-  }
-}
-
-@media (max-width: 940px) {
-  .content {
-    margin-left: 2%;
-    margin-right: 2%;
-  }
-  .mat-sidenav {
-    width: 23%;
-  }
-}
-
-@media (max-width: 1500px) {
-  mat-sidenav {
-    width: 20%;
-  }
-} */
-
 .searchBar {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
