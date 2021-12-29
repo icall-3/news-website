@@ -52,7 +52,7 @@ mat-sidenav-container {
   overflow-x: hidden;
   overflow-y: auto;
 
-  font-size: 2rem;
+  font-size: 2em;
   color: lightgray;
   background-color: #383838;
   border-radius: 20px;
@@ -66,15 +66,56 @@ mat-sidenav-container {
   color: #ff084a;
 }
 
-@media (max-width: 500px) {
+@media only screen and (min-width: 100px) {
+  .mat-sidenav {
+    width: 90%;
+  }
+  .content > h1 {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 300px) {
+  .mat-sidenav {
+    width: 50%;
+  }
+  .content > h1 {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 410px) {
+  .mat-sidenav {
+    width: 40%;
+  }
+  .content > h1 {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 520px) {
+  .mat-sidenav {
+    width: 30%;
+  }
+  .content > h1 {
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 910px) {
+  .mat-sidenav {
+    width: 20%;
+  }
+}
+
+/* @media (max-width: 500px) {
   .content {
     margin-left: 2%;
     margin-right: 2%;
   }
   mat-sidenav {
-    width: 70%;
+    width: 100%;
+    height: 90%;
+    background-color: red;
   }
 }
+
 @media (max-width: 900px) {
   .content {
     margin-left: 2%;
@@ -84,6 +125,7 @@ mat-sidenav-container {
     width: 35%;
   }
 }
+
 @media (max-width: 940px) {
   .content {
     margin-left: 2%;
@@ -93,16 +135,19 @@ mat-sidenav-container {
     width: 23%;
   }
 }
+
 @media (max-width: 1500px) {
   mat-sidenav {
     width: 20%;
   }
-}
+} */
 
 .searchBar {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  width: 200px;
+  width: 20%;
+  max-width: 200px;
+  min-width: 100px;
   height: 25px;
   border-radius: 8px;
   padding: 5px;
