@@ -18,6 +18,9 @@
   font-family: "Playfair Display", serif;
   cursor: pointer;
 }
+.logo:hover h1 {
+  color: rgb(206, 206, 206);
+}
 mat-sidenav {
   margin: 16px;
   width: 12.5%;
