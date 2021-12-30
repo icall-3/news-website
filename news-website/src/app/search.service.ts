@@ -57,6 +57,12 @@ export class SearchService {
         if (!term) {
           return articles;
         }
+        while (term.startsWith(' ', 0)) {
+          term = term.trimStart();
+        }
+        while (term.endsWith(' ')) {
+          term = term.trimEnd();
+        }
         const result = articles.filter((article: Article) => {
           term = term.toLowerCase();
           const title = article.title.toLowerCase();

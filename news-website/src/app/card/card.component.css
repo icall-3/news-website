@@ -1,5 +1,5 @@
 .card {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "PT Serif", serif;
   border-radius: 20px;
   outline: solid rgb(0, 0, 0);
   outline-width: 1px;
@@ -52,13 +52,13 @@
 .description {
   font-family: "PT Serif", serif;
   font-style: normal;
-  color: #edf2f4;
+  color: #e0e6e9;
 }
 .date {
   font-family: "PT Serif", serif;
   font-style: italic;
   justify-content: flex-end;
-  color: #8d99ae;
+  color: #858585;
 }
 @media only screen and (max-width: 500px) {
   .card-feed {
