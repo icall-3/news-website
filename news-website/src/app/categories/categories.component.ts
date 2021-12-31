@@ -32,6 +32,11 @@ export class CategoriesComponent implements OnInit {
       category +
       '&apiKey=ca343f5fb14c4fe9946c2af070bdf527';
     this.cardService.changeUrl(url);
+    this.setCategory(category);
     window.location.reload();
+  }
+
+  public setCategory(category: string) {
+    sessionStorage.setItem('category', category);
   }
 }

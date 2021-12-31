@@ -4,33 +4,19 @@
   align-items: flex-start;
   justify-content: space-between;
 }
-img {
-  width: 4ch;
-  padding-right: 5px;
-  filter: invert(70%);
-}
 
 .icon {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-bottom: 0.9375rem;
+  padding-bottom: 2rem;
 }
 p {
-  color: #70c8e2;
-  font-family: "Playfair Display", serif;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   cursor: pointer;
-  padding-top: 0.6rem;
-  padding-left: 0.1rem;
 }
 
-.icon:hover p {
-  color: #5cb85c;
-}
-.icon:hover img {
-  filter: invert(0%);
-  cursor: pointer;
+p:hover {
+  color: #00b9ff;
 }
 
 @media (max-width: 599px) {

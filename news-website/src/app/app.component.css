@@ -1,11 +1,12 @@
 .toolbar {
-  background: #1d1d1d;
+  background: #1c1c1c;
   color: white;
   overflow: hidden;
-  height: 10%;
+  height: 10vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  /* margin-bottom: 0.5px; */
 }
 .logo {
   display: flex;
@@ -15,7 +16,7 @@
   padding-left: 0.25%;
 }
 .logo > h1 {
-  font-family: "Playfair Display", serif;
+  font-family: "Poppins", sans-serif;
   cursor: pointer;
 }
 .logo:hover h1 {
@@ -25,47 +26,48 @@ mat-sidenav {
   margin: 16px;
   width: 12.5%;
   border-right: none;
-  background: #383838;
-  border-radius: 10px;
-  padding: 16px;
+  background: #1c1c1c;
+  border-radius: 6px;
+  padding-top: 20px;
+  padding-left: 20px;
   text-align: center;
-  height: 93%;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 mat-sidenav-container {
-  height: calc(100vh - 65px);
+  /* height: calc(100vh - 65px); */
   overflow: hidden;
 }
 .dashboard {
-  background-color: #4b4b4b;
+  background-color: #2b2b2b;
   position: sticky;
-  height: 93%;
+  height: 90vh;
 }
 .content {
-  height: 87.2%;
+  background-color: #1c1c1c;
+  height: 82vh;
   margin: 16px;
-  margin-left: 5%;
-  right: 5%;
   display: block;
-  padding-top: 1%;
-  padding-bottom: 2%;
+  padding-top: 20px;
+  padding-bottom: 14px;
   overflow-x: hidden;
   overflow-y: auto;
   font-size: 2em;
   color: lightgray;
-  background-color: #383838;
-  border-radius: 20px;
+  border: 1px solid #1c1c1c;
+  border-radius: 6px;
+  opacity: 1;
 }
 .content > h1 {
-  font-family: "Playfair Display", serif;
+  font-family: "Poppins", sans-serif;
   padding-left: 2%;
   padding-top: 0;
   padding-bottom: 0;
   font-size: 20px;
-  color: #ff084a;
+  color: #00b9ff;
 }
 
 @media only screen and (min-width: 100px) {
@@ -106,6 +108,18 @@ mat-sidenav-container {
   }
 }
 
+@media only screen and (min-height: 600px) {
+  .content {
+    margin-bottom: 16px;
+  }
+}
+@media only screen and (min-width: 1450px) {
+  .content {
+    margin: 16px;
+    margin-left: 5%;
+    right: 5%;
+  }
+}
 .searchBar {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
