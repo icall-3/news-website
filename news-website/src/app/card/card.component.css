@@ -1,15 +1,33 @@
 .card {
-  font-family: "PT Serif", serif;
-  border-radius: 20px;
-  outline: solid rgb(0, 0, 0);
+  font-family: "Poppins", sans-serif;
+  border-radius: 6px;
   outline-width: 1px;
   padding: 15px;
   margin-bottom: 10px;
   background-color: #2b2b2b;
 }
+
 .card:hover {
   transform: translateY(-0.5%);
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
+}
+.card-header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.datetime {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.date {
+  /* justify-content: flex-end; */
+  color: #707070;
+  margin-right: 10px;
+}
+.time {
+  color: #00749e;
 }
 .title {
   cursor: pointer;
@@ -19,9 +37,8 @@
 }
 .title > h1 {
   margin-top: 5px;
-  font-family: "PT Serif", serif;
   font-size: 20px;
-  color: #ffa31a;
+  color: #ffff;
 }
 .card-feed {
   display: flex;
@@ -43,23 +60,16 @@
   object-fit: cover;
 }
 .author {
-  font-family: "PT Serif", serif;
   font-style: normal;
-  color: #a1236d;
+  color: #707070;
   letter-spacing: 1px;
   font-size: 13px;
 }
 .description {
-  font-family: "PT Serif", serif;
   font-style: normal;
   color: #e0e6e9;
 }
-.date {
-  font-family: "PT Serif", serif;
-  font-style: italic;
-  justify-content: flex-end;
-  color: #858585;
-}
+
 @media only screen and (max-width: 500px) {
   .card-feed {
     flex-direction: column;
@@ -83,8 +93,16 @@
   .author {
     font-size: 10px;
   }
-  .date {
+  .card-header {
+    flex-direction: column-reverse;
+  }
+  .datetime {
     font-size: 12px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .card-header {
+    flex-direction: column-reverse;
   }
 }
 @media only screen and (min-width: 500px) {
@@ -97,7 +115,7 @@
   .author {
     font-size: 12px;
   }
-  .date {
+  .datetime {
     font-size: 14px;
   }
 }

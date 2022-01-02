@@ -1,4 +1,15 @@
 <div class="card">
+  <div class="card-header">
+    <p class="author">{{ articleAuthor }} | {{ articleSource | uppercase }}</p>
+    <div class="datetime">
+      <p class="date">
+        {{ articlePublishedAt | date: "longDate" | uppercase }}
+      </p>
+      <p class="time">
+        {{ articlePublishedAt | date: "shortTime" | uppercase }}
+      </p>
+    </div>
+  </div>
   <div class="title" (click)="openUrl(article.url)">
     <h1>{{ articleTitle }}</h1>
   </div>
@@ -9,14 +20,6 @@
       <p class="description">
         {{ articleDescription }}
       </p>
-      <div class="footer">
-        <p class="author">
-          {{ articleAuthor }} | {{ articleSource | uppercase }}
-        </p>
-        <p class="date">
-          {{ articlePublishedAt | date }}
-        </p>
-      </div>
     </div>
   </div>
   <div class="extra"></div>
