@@ -58,6 +58,7 @@ export class AppComponent {
     this.cardService.changeUrl(
       'https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=ca343f5fb14c4fe9946c2af070bdf527'
     );
+    sessionStorage.setItem('category', 'general');
     window.location.reload();
   }
 

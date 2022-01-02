@@ -1,29 +1,47 @@
 <div class="categories">
   <div class="icon">
-    <p id="general" (click)="setUrl('general')">General</p>
+    <p id="general" (click)="setUrl('general'); setCategory('general')">
+      General
+    </p>
   </div>
 
   <div class="icon">
-    <p id="business" (click)="setUrl('business')">Bussiness</p>
+    <p id="business" (click)="setUrl('business'); setCategory('business')">
+      Bussiness
+    </p>
   </div>
 
-  <div class="icon" id="entertainment">
-    <p (click)="setUrl('entertainment')">Entertainment</p>
+  <div class="icon">
+    <p
+      id="entertainment"
+      (click)="setUrl('entertainment'); setCategory('entertainment')"
+    >
+      Entertainment
+    </p>
   </div>
 
-  <div class="icon" id="health">
-    <p (click)="setUrl('health')">Healthcare</p>
+  <div class="icon">
+    <p id="health" (click)="setUrl('health'); setCategory('health')">
+      Healthcare
+    </p>
   </div>
 
-  <div class="icon" id="science">
-    <p (click)="setUrl('science')">Science</p>
+  <div class="icon">
+    <p id="science" (click)="setUrl('science'); setCategory('science')">
+      Science
+    </p>
   </div>
 
-  <div class="icon" id="sports">
-    <p (click)="setUrl('sports')">Sports</p>
+  <div class="icon">
+    <p id="sports" (click)="setUrl('sports'); setCategory('sports')">Sports</p>
   </div>
 
-  <div class="icon" id="technology">
-    <p (click)="setUrl('technology')">Technology</p>
+  <div class="icon">
+    <p
+      id="technology"
+      (click)="setUrl('technology'); setCategory('technology')"
+    >
+      Technology
+    </p>
   </div>
 </div>

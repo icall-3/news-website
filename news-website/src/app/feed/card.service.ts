@@ -45,11 +45,6 @@ export class CardService {
     if (sessionStorage.getItem('newUrl') != null) {
       this.url = sessionStorage.getItem('newUrl');
     }
-    if (sessionStorage.getItem('category') != null) {
-      var category = sessionStorage.getItem('category');
-      console.log(category);
-      // document.getElementById(category.toString()).style.color = '#fffff';
-    }
     return this.http.get<NewsResponse>(this.url);
   }
 }
