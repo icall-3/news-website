@@ -138,12 +138,62 @@ mat-sidenav-container {
   }
 }
 .searchBar {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  width: 20%;
+  /* background-color: rgba(0, 0, 0, 0.5);
+  color: white; */
+  /* width: 20%;
   max-width: 200px;
   min-width: 100px;
-  height: 25px;
+  height: 20px;
   border-radius: 8px;
-  padding: 5px;
+  padding: 5px; */
+  text-align: end;
+}
+.searchBox {
+  /* transform: translate(-50%, 50%); */
+  background: #2b2b2b;
+  height: 20px;
+  border-radius: 20px;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.searchBox:hover > .searchInput {
+  width: 26%;
+  padding: 0 6px;
+}
+
+/* .searchBox:hover > .searchButton {
+  margin-right: 0px;
+} */
+
+/* .searchBox:after > .searchButton {
+  background: white;
+  color: #2f3640;
+} */
+
+.searchButton {
+  color: #00749e;
+  float: right;
+  width: 20px;
+  height: 20px;
+  border-color: rgba(0, 0, 0, 0);
+  outline: none;
+  background: #2b2b2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.searchInput {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: #707070;
+  font-size: 12px;
+  transition: 0.4s;
+  line-height: 20px;
+  width: 0px;
 }

@@ -10,13 +10,17 @@
     </button>
     <h1 (click)="homeButton()">Daily News</h1>
   </div>
-  <input
-    id="searchBar"
-    type="text"
-    class="searchBar"
-    placeholder="Search..."
-    (keyup)="onChange($event)"
-  />
+  <div class="searchBox">
+    <input
+      type="text"
+      class="searchInput"
+      placeholder="Search..."
+      (keyup)="onChange($event)"
+    />
+    <button class="searchButton" href="#">
+      <i class="material-icons"> search </i>
+    </button>
+  </div>
 </mat-toolbar>
 
 <mat-sidenav-container class="dashboard">
