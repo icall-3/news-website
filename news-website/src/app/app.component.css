@@ -81,12 +81,65 @@ mat-sidenav-container {
   color: #00b9ff;
 }
 
+.searchBox {
+  background: #ffff;
+  height: 20px;
+  border-radius: 20px;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.searchButton {
+  color: #161616;
+  float: right;
+  width: 20px;
+  height: 20px;
+  border-color: rgba(0, 0, 0, 0);
+  outline: none;
+  background: #ffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.searchInput {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: #707070;
+  font-size: 12px;
+  transition: 0.4s;
+  line-height: 20px;
+  width: 0px;
+}
+.searchInput.isFocus {
+  width: 16vw;
+  padding: 0 6px;
+}
+
 @media only screen and (min-width: 100px) {
   .mat-sidenav {
     width: 90%;
   }
+  .logo > h1 {
+    font-size: 14px;
+  }
   .content > h1 {
     font-size: 14px;
+  }
+  .searchInput.isFocus {
+    width: 24vw;
+  }
+  .searchButton {
+    width: 15px;
+    height: 15px;
+  }
+  .searchBox {
+    height: 15px;
   }
 }
 @media only screen and (min-width: 300px) {
@@ -104,6 +157,9 @@ mat-sidenav-container {
   .content > h1 {
     font-size: 16px;
   }
+  .searchInput.isFocus {
+    width: 15vw;
+  }
 }
 @media only screen and (min-width: 520px) {
   .mat-sidenav {
@@ -112,10 +168,16 @@ mat-sidenav-container {
   .content > h1 {
     font-size: 18px;
   }
+  .searchInput.isFocus {
+    width: 14vw;
+  }
 }
 @media only screen and (min-width: 910px) {
   .mat-sidenav {
     width: 20%;
+  }
+  .searchInput.isFocus {
+    width: 14vw;
   }
 }
 
@@ -143,64 +205,4 @@ mat-sidenav-container {
       height: 84vh;
     }
   }
-}
-.searchBar {
-  /* background-color: rgba(0, 0, 0, 0.5);
-  color: white; */
-  /* width: 20%;
-  max-width: 200px;
-  min-width: 100px;
-  height: 20px;
-  border-radius: 8px;
-  padding: 5px; */
-  text-align: end;
-}
-.searchBox {
-  /* transform: translate(-50%, 50%); */
-  background: #ffff;
-  height: 20px;
-  border-radius: 20px;
-  padding: 10px;
-  margin-left: 10px;
-}
-
-.searchBox:hover > .searchInput {
-  width: 26%;
-  padding: 0 6px;
-}
-
-/* .searchBox:hover > .searchButton {
-  margin-right: 0px;
-} */
-
-/* .searchBox:after > .searchButton {
-  background: white;
-  color: #2f3640;
-} */
-
-.searchButton {
-  color: #161616;
-  float: right;
-  width: 20px;
-  height: 20px;
-  border-color: rgba(0, 0, 0, 0);
-  outline: none;
-  background: #ffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.4s;
-}
-
-.searchInput {
-  border: none;
-  background: none;
-  outline: none;
-  float: left;
-  padding: 0;
-  color: #707070;
-  font-size: 12px;
-  transition: 0.4s;
-  line-height: 20px;
-  width: 0px;
 }

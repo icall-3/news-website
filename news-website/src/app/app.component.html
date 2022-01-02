@@ -10,14 +10,15 @@
     </button>
     <h1 (click)="homeButton()">Daily News</h1>
   </div>
-  <div class="searchBox" onclick="isClicked">
+  <div class="searchBox" id="searchBox">
     <input
+      id="inputFocus"
       type="text"
       class="searchInput"
       placeholder="Search..."
       (keyup)="onChange($event)"
     />
-    <button class="searchButton" href="#">
+    <button class="searchButton" id="searchButton" (click)="isClicked()">
       <i class="material-icons"> search </i>
     </button>
   </div>
@@ -33,6 +34,6 @@
       <h1>{{ getCategory() | titlecase }}</h1>
       <app-feed></app-feed>
     </div>
-    <app-spinner></app-spinner>
+    <!-- <app-spinner></app-spinner> -->
   </mat-sidenav-content>
 </mat-sidenav-container>

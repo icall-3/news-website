@@ -35,7 +35,22 @@ export class AppComponent {
     private cardService: CardService,
     private searchService: SearchService
   ) {
-    window.addEventListener('click', this.toggleClicked);
+    // btnDelete.addEventListener('click', function (e) {
+    //   e.preventDefault();
+    //   inputFocus.nodeValue = '';
+    // });
+    // inputFocus.addEventListener('click', function () {
+    //   this.classList.add('isFocus');
+    // });
+    // document.addEventListener('click', function (e) {
+    //   if (document.getElementById('inputFocus').classList.contains('isFocus')) {
+    //     inputFocus.classList.remove('isFocus');
+    //     console.log('Remove focus');
+    //   } else {
+    //     inputFocus.classList.add('isFocus');
+    //     console.log('Add focus');
+    //   }
+    // });
   }
 
   /**
@@ -84,12 +99,17 @@ export class AppComponent {
     console.log(value);
     this.searchService.searchTermObs.next(value);
   }
-  public toggleClicked() {
-    if (sessionStorage.getItem('isClicked') == null) {
-      sessionStorage.setItem('isClicked', 'true');
-    } else if (sessionStorage.getItem('isClicked') == 'true') {
-      sessionStorage.setItem('isClicked', 'false');
-    } else sessionStorage.setItem('isClicked', 'true');
-    console.log('IsClicked ' + sessionStorage.getItem('isClicked'));
+
+  public isClicked() {
+    document.getElementById('inputFocus').classList.toggle('isFocus');
   }
+
+  // public toggleClicked() {
+  //   if (sessionStorage.getItem('isClicked') == null) {
+  //     sessionStorage.setItem('isClicked', 'false');
+  //   } else if (sessionStorage.getItem('isClicked') == 'true') {
+  //     sessionStorage.setItem('isClicked', 'false');
+  //   } else sessionStorage.setItem('isClicked', 'true');
+  //   console.log('IsClicked ' + sessionStorage.getItem('isClicked'));
+  // }
 }
