@@ -1,12 +1,18 @@
 .toolbar {
-  background: #1c1c1c;
+  background-image: url("/assets/bkg-img.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 47%;
   color: white;
   overflow: hidden;
   height: 10vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* margin-bottom: 0.5px; */
+  margin-bottom: 0.5px;
+  background-color: #1c1c1c;
+  background-blend-mode: luminosity;
+  background-blend-mode: multiply;
 }
 .logo {
   display: flex;

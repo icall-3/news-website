@@ -3,6 +3,7 @@ import { Component, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { SearchService } from './search.service';
+import { combineLatestInit } from 'rxjs/internal/observable/combineLatest';
 
 /**
  * The main component of the website
@@ -33,7 +34,9 @@ export class AppComponent {
     private observer: BreakpointObserver,
     private cardService: CardService,
     private searchService: SearchService
-  ) {}
+  ) {
+    window.addEventListener('click', this.toggleClicked);
+  }
 
   /**
    * Decides if the sidebar menu should be displayed or not depending on the width
@@ -80,5 +83,13 @@ export class AppComponent {
     const value = (target as any).value;
     console.log(value);
     this.searchService.searchTermObs.next(value);
+  }
+  public toggleClicked() {
+    if (sessionStorage.getItem('isClicked') == null) {
+      sessionStorage.setItem('isClicked', 'true');
+    } else if (sessionStorage.getItem('isClicked') == 'true') {
+      sessionStorage.setItem('isClicked', 'false');
+    } else sessionStorage.setItem('isClicked', 'true');
+    console.log('IsClicked ' + sessionStorage.getItem('isClicked'));
   }
 }
