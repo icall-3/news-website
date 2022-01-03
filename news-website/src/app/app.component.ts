@@ -3,6 +3,7 @@ import { Component, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { SearchService } from './search.service';
+import { combineLatestInit } from 'rxjs/internal/observable/combineLatest';
 
 /**
  * The main component of the website
@@ -33,7 +34,24 @@ export class AppComponent {
     private observer: BreakpointObserver,
     private cardService: CardService,
     private searchService: SearchService
-  ) {}
+  ) {
+    // btnDelete.addEventListener('click', function (e) {
+    //   e.preventDefault();
+    //   inputFocus.nodeValue = '';
+    // });
+    // inputFocus.addEventListener('click', function () {
+    //   this.classList.add('isFocus');
+    // });
+    // document.addEventListener('click', function (e) {
+    //   if (document.getElementById('inputFocus').classList.contains('isFocus')) {
+    //     inputFocus.classList.remove('isFocus');
+    //     console.log('Remove focus');
+    //   } else {
+    //     inputFocus.classList.add('isFocus');
+    //     console.log('Add focus');
+    //   }
+    // });
+  }
 
   /**
    * Decides if the sidebar menu should be displayed or not depending on the width
@@ -58,6 +76,7 @@ export class AppComponent {
     this.cardService.changeUrl(
       'https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=ca343f5fb14c4fe9946c2af070bdf527'
     );
+    sessionStorage.setItem('category', 'general');
     window.location.reload();
   }
 
@@ -80,4 +99,17 @@ export class AppComponent {
     console.log(value);
     this.searchService.searchTermObs.next(value);
   }
+
+  public isClicked() {
+    document.getElementById('inputFocus').classList.toggle('isFocus');
+  }
+
+  // public toggleClicked() {
+  //   if (sessionStorage.getItem('isClicked') == null) {
+  //     sessionStorage.setItem('isClicked', 'false');
+  //   } else if (sessionStorage.getItem('isClicked') == 'true') {
+  //     sessionStorage.setItem('isClicked', 'false');
+  //   } else sessionStorage.setItem('isClicked', 'true');
+  //   console.log('IsClicked ' + sessionStorage.getItem('isClicked'));
+  // }
 }

@@ -10,6 +10,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./categories.component.css'],
 })
 export class CategoriesComponent implements OnInit {
+  private category: string;
+
   /**
    * Includes the card service for requesting articles from the right category
    * @param cardService The service that makes a request to the API
@@ -19,7 +21,9 @@ export class CategoriesComponent implements OnInit {
   /**
    * @ignore
    */
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    window.addEventListener('load', this.getCategory);
+  }
 
   /**
    * Method to set the url by changing the category to the desired one
@@ -37,6 +41,15 @@ export class CategoriesComponent implements OnInit {
   }
 
   public setCategory(category: string) {
+    this.category = category;
     sessionStorage.setItem('category', category);
+  }
+  public getCategory() {
+    if (sessionStorage.getItem('category') == null) {
+      this.category = 'general';
+      console.log('session storage null');
+    } else this.category = sessionStorage.getItem('category');
+    console.log(this.category);
+    document.getElementById(this.category).style.color = '#00b9ff';
   }
 }

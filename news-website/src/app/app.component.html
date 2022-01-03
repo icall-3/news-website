@@ -10,13 +10,18 @@
     </button>
     <h1 (click)="homeButton()">Daily News</h1>
   </div>
-  <input
-    id="searchBar"
-    type="text"
-    class="searchBar"
-    placeholder="Search..."
-    (keyup)="onChange($event)"
-  />
+  <div class="searchBox" id="searchBox">
+    <input
+      id="inputFocus"
+      type="text"
+      class="searchInput"
+      placeholder="Search..."
+      (keyup)="onChange($event)"
+    />
+    <button class="searchButton" id="searchButton" (click)="isClicked()">
+      <i class="material-icons"> search </i>
+    </button>
+  </div>
 </mat-toolbar>
 
 <mat-sidenav-container class="dashboard">
@@ -29,6 +34,6 @@
       <h1>{{ getCategory() | titlecase }}</h1>
       <app-feed></app-feed>
     </div>
-    <app-spinner></app-spinner>
+    <!-- <app-spinner></app-spinner> -->
   </mat-sidenav-content>
 </mat-sidenav-container>
