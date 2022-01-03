@@ -87,6 +87,9 @@ mat-sidenav-container {
   border-radius: 20px;
   padding: 10px;
   margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .searchButton {
