@@ -115,6 +115,7 @@ mat-sidenav-container {
   transition: 0.4s;
   line-height: 20px;
   width: 0px;
+  vertical-align: middle;
 }
 .searchInput.isFocus {
   width: 16vw;
@@ -126,7 +127,7 @@ mat-sidenav-container {
     width: 90%;
   }
   .logo > h1 {
-    font-size: 14px;
+    font-size: 0.9em;
   }
   .content > h1 {
     font-size: 14px;
@@ -147,7 +148,7 @@ mat-sidenav-container {
     width: 50%;
   }
   .content > h1 {
-    font-size: 14px;
+    font-size: 1rem;
   }
 }
 @media only screen and (min-width: 410px) {
@@ -160,6 +161,9 @@ mat-sidenav-container {
   .searchInput.isFocus {
     width: 15vw;
   }
+  .logo > h1 {
+    font-size: 1em;
+  }
 }
 @media only screen and (min-width: 520px) {
   .mat-sidenav {
@@ -171,6 +175,9 @@ mat-sidenav-container {
   .searchInput.isFocus {
     width: 14vw;
   }
+  .logo > h1 {
+    font-size: 1.1em;
+  }
 }
 @media only screen and (min-width: 910px) {
   .mat-sidenav {
@@ -178,6 +185,9 @@ mat-sidenav-container {
   }
   .searchInput.isFocus {
     width: 14vw;
+  }
+  .logo > h1 {
+    font-size: 1.2em;
   }
 }
 
