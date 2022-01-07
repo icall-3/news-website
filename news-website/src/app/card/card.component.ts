@@ -58,7 +58,7 @@ export class CardComponent implements OnInit {
    * Get method for the source of the article
    */
   get articleSource() {
-    return this.article && this.article.source.name
+    return this.article && this.article.source
       ? this.article.source.name
       : null;
   }
