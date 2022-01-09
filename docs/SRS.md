@@ -26,7 +26,7 @@ App description:
 ### 1.2 Intended audience
 
 - Ages: Open for everyone, no age restriction.
-- The app is inteneded for personal use, with free of any taxes, no commercial activites are permitted.
+- The app is inteneded for personal use, with free of any taxes, no commercial activities are permitted.
 
 ### 1.3 Intended use
 
@@ -52,12 +52,16 @@ We are building this website because we want everyone to have access to new info
 
 ## 3. System Features and Requirements
 
-### 3.1 Functional Requirements
-
 - The main page displays the general news
-- The left sidebar is a navigation bar for browsing different news categories, such as Business, Entertainment, Health, Science, Sports and Technology
+- The left sidebar is a navigation bar for browsing different news categories, such as Business, Entertainment, Healthcare, Science, Sports and Technology
 - The search bar is used to find the desired titles
 - The user can read the whole article by clicking the title; this action will redirect the user to the main article of the news
+
+### 3.1 Functional Requirements
+
+#### User stories
+
+_As a user I can browse through different news categories and I can read a brief description of the article, as well as its source, and if I want to read more, I can simply click the title of the article and I will be redirected to the orginal article._
 
 ### 3.2 External Interface Requirements
 
