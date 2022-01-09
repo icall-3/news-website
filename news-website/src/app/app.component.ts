@@ -86,6 +86,9 @@ export class AppComponent {
    */
   public getCategory(): string {
     var category = this.cardService.getUrl().split(/&category=|&/);
+    if (category[1] == 'health') {
+      category[1] += 'care';
+    }
     return category[1];
   }
 
@@ -96,7 +99,6 @@ export class AppComponent {
   public onChange(event: Event): void {
     const target = event.target;
     const value = (target as any).value;
-    console.log(value);
     this.searchService.searchTermObs.next(value);
   }
 
