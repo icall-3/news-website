@@ -1,3 +1,4 @@
+import { FeedComponent } from './feed/feed.component';
 import { SpinnerService } from './spinner/spinner.service';
 import { Injectable } from '@angular/core';
 import {
@@ -68,6 +69,9 @@ export class SearchService {
           const title = article.title.toLowerCase();
           return title.includes(term.toString());
         });
+        if (result.length == 0) {
+          return articles;
+        }
         return result;
       })
     );
