@@ -132,6 +132,21 @@
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#category" >category</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -141,6 +156,14 @@
                 <tr>
                     <td class="col-md-4">
                         <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getCategory" >getCategory</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#setCategory" >setCategory</a>
+                            </li>
                             <li>
                                     <span class="modifier">Public</span>
                                 <a href="#setUrl" >setUrl</a>
@@ -168,7 +191,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/categories/categories.component.ts:12</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/categories/categories.component.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -226,6 +249,120 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="getCategory"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>getCategory</b></span>
+                        <a href="#getCategory"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getCategory()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="55"
+                            class="link-to-prism">src/app/categories/categories.component.ts:55</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method used to get the stored category title from session storage</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setCategory"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>setCategory</b></span>
+                        <a href="#setCategory"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setCategory(category: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="48"
+                            class="link-to-prism">src/app/categories/categories.component.ts:48</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method used to store the category title in session storage</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>category</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="setUrl"></a>
                     <span class="name">
                         <span class="modifier">Public</span>
@@ -244,8 +381,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="29"
-                            class="link-to-prism">src/app/categories/categories.component.ts:29</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="36"
+                            class="link-to-prism">src/app/categories/categories.component.ts:36</a></div>
                 </td>
             </tr>
 
@@ -302,6 +439,45 @@ and reloading the page with the new category</p>
         </tbody>
     </table>
 </section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="category"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>category</b></span>
+                        <a href="#category"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/categories/categories.component.ts:16</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>String used to store category title</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
 
 </div>
 
@@ -320,6 +496,11 @@ import { Component, OnInit } from &#x27;@angular/core&#x27;;
 })
 export class CategoriesComponent implements OnInit {
   /**
+   * String used to store category title
+   */
+  private category: string;
+
+  /**
    * Includes the card service for requesting articles from the right category
    * @param cardService The service that makes a request to the API
    */
@@ -328,7 +509,9 @@ export class CategoriesComponent implements OnInit {
   /**
    * @ignore
    */
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    window.addEventListener(&#x27;load&#x27;, this.getCategory);
+  }
 
   /**
    * Method to set the url by changing the category to the desired one
@@ -341,7 +524,25 @@ export class CategoriesComponent implements OnInit {
       category +
       &#x27;&amp;apiKey&#x3D;ca343f5fb14c4fe9946c2af070bdf527&#x27;;
     this.cardService.changeUrl(url);
+    this.setCategory(category);
     window.location.reload();
+  }
+  /**
+   * Method used to store the category title in session storage
+   */
+  public setCategory(category: string) {
+    this.category &#x3D; category;
+    sessionStorage.setItem(&#x27;category&#x27;, category);
+  }
+  /**
+   * Method used to get the stored category title from session storage
+   */
+  public getCategory() {
+    if (sessionStorage.getItem(&#x27;category&#x27;) &#x3D;&#x3D; null) {
+      this.category &#x3D; &#x27;general&#x27;;
+      console.log(&#x27;session storage null&#x27;);
+    } else this.category &#x3D; sessionStorage.getItem(&#x27;category&#x27;);
+    document.getElementById(this.category).style.color &#x3D; &#x27;#00b9ff&#x27;;
   }
 }
 </code></pre>
@@ -349,39 +550,50 @@ export class CategoriesComponent implements OnInit {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;categories&quot;&gt;
-  &lt;div class&#x3D;&quot;icon&quot; id&#x3D;&quot;general&quot; (click)&#x3D;&quot;setUrl(&#x27;general&#x27;)&quot;&gt;
-    &lt;img src&#x3D;&quot;/assets/general.png&quot; /&gt;
-    &lt;p&gt;General&lt;/p&gt;
+  &lt;div class&#x3D;&quot;icon&quot;&gt;
+    &lt;p id&#x3D;&quot;general&quot; (click)&#x3D;&quot;setUrl(&#x27;general&#x27;); setCategory(&#x27;general&#x27;)&quot;&gt;
+      General
+    &lt;/p&gt;
   &lt;/div&gt;
 
-  &lt;div class&#x3D;&quot;icon&quot; id&#x3D;&quot;business&quot; (click)&#x3D;&quot;setUrl(&#x27;business&#x27;)&quot;&gt;
-    &lt;img src&#x3D;&quot;/assets/business.png&quot; /&gt;
-    &lt;p&gt;Business&lt;/p&gt;
+  &lt;div class&#x3D;&quot;icon&quot;&gt;
+    &lt;p id&#x3D;&quot;business&quot; (click)&#x3D;&quot;setUrl(&#x27;business&#x27;); setCategory(&#x27;business&#x27;)&quot;&gt;
+      Business
+    &lt;/p&gt;
   &lt;/div&gt;
 
-  &lt;div class&#x3D;&quot;icon&quot; id&#x3D;&quot;entertainment&quot; (click)&#x3D;&quot;setUrl(&#x27;entertainment&#x27;)&quot;&gt;
-    &lt;img src&#x3D;&quot;/assets/entertainment.png&quot; /&gt;
-    &lt;p&gt;Entertainment&lt;/p&gt;
+  &lt;div class&#x3D;&quot;icon&quot;&gt;
+    &lt;p
+      id&#x3D;&quot;entertainment&quot;
+      (click)&#x3D;&quot;setUrl(&#x27;entertainment&#x27;); setCategory(&#x27;entertainment&#x27;)&quot;
+    &gt;
+      Entertainment
+    &lt;/p&gt;
   &lt;/div&gt;
 
-  &lt;div class&#x3D;&quot;icon&quot; id&#x3D;&quot;health&quot; (click)&#x3D;&quot;setUrl(&#x27;health&#x27;)&quot;&gt;
-    &lt;img src&#x3D;&quot;/assets/health.png&quot; /&gt;
-    &lt;p&gt;Health&lt;/p&gt;
+  &lt;div class&#x3D;&quot;icon&quot;&gt;
+    &lt;p id&#x3D;&quot;health&quot; (click)&#x3D;&quot;setUrl(&#x27;health&#x27;); setCategory(&#x27;health&#x27;)&quot;&gt;
+      Healthcare
+    &lt;/p&gt;
   &lt;/div&gt;
 
-  &lt;div class&#x3D;&quot;icon&quot; id&#x3D;&quot;science&quot; (click)&#x3D;&quot;setUrl(&#x27;science&#x27;)&quot;&gt;
-    &lt;img src&#x3D;&quot;/assets/science.png&quot; /&gt;
-    &lt;p&gt;Science&lt;/p&gt;
+  &lt;div class&#x3D;&quot;icon&quot;&gt;
+    &lt;p id&#x3D;&quot;science&quot; (click)&#x3D;&quot;setUrl(&#x27;science&#x27;); setCategory(&#x27;science&#x27;)&quot;&gt;
+      Science
+    &lt;/p&gt;
   &lt;/div&gt;
 
-  &lt;div class&#x3D;&quot;icon&quot; id&#x3D;&quot;sports&quot; (click)&#x3D;&quot;setUrl(&#x27;sports&#x27;)&quot;&gt;
-    &lt;img src&#x3D;&quot;/assets/sports.png&quot; /&gt;
-    &lt;p&gt;Sports&lt;/p&gt;
+  &lt;div class&#x3D;&quot;icon&quot;&gt;
+    &lt;p id&#x3D;&quot;sports&quot; (click)&#x3D;&quot;setUrl(&#x27;sports&#x27;); setCategory(&#x27;sports&#x27;)&quot;&gt;Sports&lt;/p&gt;
   &lt;/div&gt;
 
-  &lt;div class&#x3D;&quot;icon&quot; id&#x3D;&quot;technology&quot; (click)&#x3D;&quot;setUrl(&#x27;technology&#x27;)&quot;&gt;
-    &lt;img src&#x3D;&quot;/assets/technology.png&quot; /&gt;
-    &lt;p&gt;Technology&lt;/p&gt;
+  &lt;div class&#x3D;&quot;icon&quot;&gt;
+    &lt;p
+      id&#x3D;&quot;technology&quot;
+      (click)&#x3D;&quot;setUrl(&#x27;technology&#x27;); setCategory(&#x27;technology&#x27;)&quot;
+    &gt;
+      Technology
+    &lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -397,43 +609,39 @@ export class CategoriesComponent implements OnInit {
   align-items: flex-start;
   justify-content: space-between;
 }
-img {
-  width: 4ch;
-  padding-right: 5px;
-  filter: invert(70%);
-}
 
 .icon {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-bottom: 0.9375rem;
+  padding-bottom: 2rem;
 }
 p {
-  color: #70c8e2;
-  font-family: &quot;Playfair Display&quot;, serif;
+  color: #ffffff;
+  font-family: &quot;Poppins&quot;, sans-serif;
   font-size: 18px;
   cursor: pointer;
-  padding-top: 0.6rem;
-  padding-left: 0.1rem;
 }
 
-.icon:hover p {
-  color: #5cb85c;
-}
-.icon:hover img {
-  filter: invert(0%);
-  cursor: pointer;
+p:hover {
+  color: rgb(206, 206, 206);
 }
 
-@media (max-width: 599px) {
+@media only screen and (min-width: 100px) {
   p {
-    font-size: 11px;
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 410px) {
+  p {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 520px) {
+  p {
+    font-size: 17px;
   }
 }
 @media only screen and (min-width: 600px) {
   p {
-    font-size: 14px;
+    font-size: 18px;
   }
 }
 @media only screen and (min-width: 990px) {
@@ -469,7 +677,7 @@ p {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="categories">  <div class="icon" id="general" (click)="setUrl(\'general\')">    <img src="/assets/general.png" />    <p>General</p>  </div>  <div class="icon" id="business" (click)="setUrl(\'business\')">    <img src="/assets/business.png" />    <p>Business</p>  </div>  <div class="icon" id="entertainment" (click)="setUrl(\'entertainment\')">    <img src="/assets/entertainment.png" />    <p>Entertainment</p>  </div>  <div class="icon" id="health" (click)="setUrl(\'health\')">    <img src="/assets/health.png" />    <p>Health</p>  </div>  <div class="icon" id="science" (click)="setUrl(\'science\')">    <img src="/assets/science.png" />    <p>Science</p>  </div>  <div class="icon" id="sports" (click)="setUrl(\'sports\')">    <img src="/assets/sports.png" />    <p>Sports</p>  </div>  <div class="icon" id="technology" (click)="setUrl(\'technology\')">    <img src="/assets/technology.png" />    <p>Technology</p>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="categories">  <div class="icon">    <p id="general" (click)="setUrl(\'general\'); setCategory(\'general\')">      General    </p>  </div>  <div class="icon">    <p id="business" (click)="setUrl(\'business\'); setCategory(\'business\')">      Business    </p>  </div>  <div class="icon">    <p      id="entertainment"      (click)="setUrl(\'entertainment\'); setCategory(\'entertainment\')"    >      Entertainment    </p>  </div>  <div class="icon">    <p id="health" (click)="setUrl(\'health\'); setCategory(\'health\')">      Healthcare    </p>  </div>  <div class="icon">    <p id="science" (click)="setUrl(\'science\'); setCategory(\'science\')">      Science    </p>  </div>  <div class="icon">    <p id="sports" (click)="setUrl(\'sports\'); setCategory(\'sports\')">Sports</p>  </div>  <div class="icon">    <p      id="technology"      (click)="setUrl(\'technology\'); setCategory(\'technology\')"    >      Technology    </p>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'CategoriesComponent', 'selector': 'app-categories'},{'name': 'FeedComponent', 'selector': 'app-feed'},{'name': 'SpinnerComponent', 'selector': 'app-spinner'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'CategoriesComponent'};

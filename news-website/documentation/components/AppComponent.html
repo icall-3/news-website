@@ -161,6 +161,10 @@
                                 <a href="#homeButton" >homeButton</a>
                             </li>
                             <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#isClicked" >isClicked</a>
+                            </li>
+                            <li>
                                 <a href="#ngAfterViewInit" >ngAfterViewInit</a>
                             </li>
                             <li>
@@ -190,7 +194,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/app.component.ts:24</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/app.component.ts:25</a></div>
                             </td>
                         </tr>
 
@@ -298,8 +302,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="68"
-                            class="link-to-prism">src/app/app.component.ts:68</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="70"
+                            class="link-to-prism">src/app/app.component.ts:70</a></div>
                 </td>
             </tr>
 
@@ -345,15 +349,56 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="57"
-                            class="link-to-prism">src/app/app.component.ts:57</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">src/app/app.component.ts:58</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Refreshes the page if the title (home button) is clicked&quot;</p>
+                    <div class="io-description"><p>Refreshes the page if the title (home button) is clicked</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isClicked"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>isClicked</b></span>
+                        <a href="#isClicked"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>isClicked()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="92"
+                            class="link-to-prism">src/app/app.component.ts:92</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method used to toggle searchbar view</p>
 </div>
 
                     <div class="io-description">
@@ -384,8 +429,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="42"
-                            class="link-to-prism">src/app/app.component.ts:42</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="43"
+                            class="link-to-prism">src/app/app.component.ts:43</a></div>
                 </td>
             </tr>
 
@@ -426,8 +471,8 @@ of the screen</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="77"
-                            class="link-to-prism">src/app/app.component.ts:77</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="82"
+                            class="link-to-prism">src/app/app.component.ts:82</a></div>
                 </td>
             </tr>
 
@@ -516,7 +561,7 @@ of the screen</p>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/app.component.ts:24</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/app.component.ts:25</a></div>
                         </td>
                     </tr>
 
@@ -553,7 +598,7 @@ of the screen</p>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/app.component.ts:19</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/app.component.ts:20</a></div>
                         </td>
                     </tr>
 
@@ -577,6 +622,7 @@ import { Component, ViewChild } from &#x27;@angular/core&#x27;;
 import { MatSidenav } from &#x27;@angular/material/sidenav&#x27;;
 import { BreakpointObserver } from &#x27;@angular/cdk/layout&#x27;;
 import { SearchService } from &#x27;./search.service&#x27;;
+import { combineLatestInit } from &#x27;rxjs/internal/observable/combineLatest&#x27;;
 
 /**
  * The main component of the website
@@ -626,12 +672,13 @@ export class AppComponent {
   }
 
   /**
-   * Refreshes the page if the title (home button) is clicked&quot;
+   * Refreshes the page if the title (home button) is clicked
    */
   public homeButton(): void {
     this.cardService.changeUrl(
       &#x27;https://newsapi.org/v2/top-headlines?country&#x3D;us&amp;category&#x3D;general&amp;apiKey&#x3D;ca343f5fb14c4fe9946c2af070bdf527&#x27;
     );
+    sessionStorage.setItem(&#x27;category&#x27;, &#x27;general&#x27;);
     window.location.reload();
   }
 
@@ -641,6 +688,9 @@ export class AppComponent {
    */
   public getCategory(): string {
     var category &#x3D; this.cardService.getUrl().split(/&amp;category&#x3D;|&amp;/);
+    if (category[1] &#x3D;&#x3D; &#x27;health&#x27;) {
+      category[1] +&#x3D; &#x27;care&#x27;;
+    }
     return category[1];
   }
 
@@ -651,8 +701,15 @@ export class AppComponent {
   public onChange(event: Event): void {
     const target &#x3D; event.target;
     const value &#x3D; (target as any).value;
-    console.log(value);
     this.searchService.searchTermObs.next(value);
+  }
+
+  /**
+   * Method used to toggle searchbar view
+   */
+
+  public isClicked() {
+    document.getElementById(&#x27;inputFocus&#x27;).classList.toggle(&#x27;isFocus&#x27;);
   }
 }
 </code></pre>
@@ -671,13 +728,18 @@ export class AppComponent {
     &lt;/button&gt;
     &lt;h1 (click)&#x3D;&quot;homeButton()&quot;&gt;Daily News&lt;/h1&gt;
   &lt;/div&gt;
-  &lt;input
-    id&#x3D;&quot;searchBar&quot;
-    type&#x3D;&quot;text&quot;
-    class&#x3D;&quot;searchBar&quot;
-    placeholder&#x3D;&quot;Search...&quot;
-    (keyup)&#x3D;&quot;onChange($event)&quot;
-  /&gt;
+  &lt;div class&#x3D;&quot;searchBox&quot; id&#x3D;&quot;searchBox&quot;&gt;
+    &lt;input
+      id&#x3D;&quot;inputFocus&quot;
+      type&#x3D;&quot;text&quot;
+      class&#x3D;&quot;searchInput&quot;
+      placeholder&#x3D;&quot;Search...&quot;
+      (keyup)&#x3D;&quot;onChange($event)&quot;
+    /&gt;
+    &lt;button class&#x3D;&quot;searchButton&quot; id&#x3D;&quot;searchButton&quot; (click)&#x3D;&quot;isClicked()&quot;&gt;
+      &lt;i class&#x3D;&quot;material-icons&quot;&gt; search &lt;/i&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
 &lt;/mat-toolbar&gt;
 
 &lt;mat-sidenav-container class&#x3D;&quot;dashboard&quot;&gt;
@@ -701,13 +763,20 @@ export class AppComponent {
                     <code>./app.component.css</code>
                 </p>
                 <pre class="line-numbers"><code class="language-scss">.toolbar {
-  background: #1d1d1d;
+  background-image: url(&quot;/assets/bkg-img.jpg&quot;);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 47%;
   color: white;
   overflow: hidden;
-  height: 10%;
+  height: 10vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 0.5px;
+  background-color: #1c1c1c;
+  background-blend-mode: luminosity;
+  background-blend-mode: multiply;
 }
 .logo {
   display: flex;
@@ -717,7 +786,8 @@ export class AppComponent {
   padding-left: 0.25%;
 }
 .logo &gt; h1 {
-  font-family: &quot;Playfair Display&quot;, serif;
+  font-family: &quot;Poppins&quot;, sans-serif;
+  font-size: 1.2em;
   cursor: pointer;
 }
 .logo:hover h1 {
@@ -727,55 +797,117 @@ mat-sidenav {
   margin: 16px;
   width: 12.5%;
   border-right: none;
-  background: #383838;
-  border-radius: 10px;
-  padding: 16px;
+  background: #1c1c1c;
+  border-radius: 6px;
+  padding-top: 20px;
+  padding-left: 20px;
   text-align: center;
-  height: 93%;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-bottom: 1vh;
 }
 
 mat-sidenav-container {
-  height: calc(100vh - 65px);
+  /* height: calc(90vh - 65px); */
   overflow: hidden;
 }
 .dashboard {
-  background-color: #4b4b4b;
+  background-color: #2b2b2b;
   position: sticky;
-  height: 93%;
+  height: 90vh;
 }
 .content {
-  height: 87.2%;
+  background-color: #1c1c1c;
+  /* height: 82vh; 100 - 10 - 16px */
+  height: calc(88vh - 50px);
   margin: 16px;
-  margin-left: 5%;
-  right: 5%;
+  margin-bottom: 0;
   display: block;
-  padding-top: 1%;
-  padding-bottom: 2%;
+  padding-top: 20px;
+  padding-bottom: 1vh;
   overflow-x: hidden;
   overflow-y: auto;
   font-size: 2em;
   color: lightgray;
-  background-color: #383838;
-  border-radius: 20px;
+  border: 1px solid #1c1c1c;
+  border-radius: 6px;
+  opacity: 1;
 }
 .content &gt; h1 {
-  font-family: &quot;Playfair Display&quot;, serif;
+  font-family: &quot;Poppins&quot;, sans-serif;
   padding-left: 2%;
   padding-top: 0;
-  padding-bottom: 0;
+  margin-bottom: 10px;
+  margin-top: -15px;
   font-size: 20px;
-  color: #ff084a;
+  color: #00b9ff;
+}
+
+.searchBox {
+  background: #ffff;
+  height: 20px;
+  border-radius: 20px;
+  padding: 10px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.searchButton {
+  color: #161616;
+  float: right;
+  width: 20px;
+  height: 20px;
+  border-color: rgba(0, 0, 0, 0);
+  outline: none;
+  background: #ffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.searchInput {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: #707070;
+  font-size: 12px;
+  transition: 0.4s;
+  line-height: 20px;
+  width: 0px;
+  vertical-align: middle;
+}
+.searchInput.isFocus {
+  width: 16vw;
+  padding: 0 6px;
 }
 
 @media only screen and (min-width: 100px) {
   .mat-sidenav {
     width: 90%;
   }
+  .logo &gt; h1 {
+    font-size: 0.9em;
+  }
   .content &gt; h1 {
     font-size: 14px;
+  }
+  .searchInput.isFocus {
+    width: 24vw;
+  }
+  .searchButton {
+    width: 15px;
+    height: 15px;
+  }
+  .searchBox {
+    height: 15px;
   }
 }
 @media only screen and (min-width: 300px) {
@@ -783,7 +915,7 @@ mat-sidenav-container {
     width: 50%;
   }
   .content &gt; h1 {
-    font-size: 14px;
+    font-size: 1rem;
   }
 }
 @media only screen and (min-width: 410px) {
@@ -793,30 +925,63 @@ mat-sidenav-container {
   .content &gt; h1 {
     font-size: 16px;
   }
+  .searchInput.isFocus {
+    width: 15vw;
+  }
+  .logo &gt; h1 {
+    font-size: 1em;
+  }
 }
 @media only screen and (min-width: 520px) {
   .mat-sidenav {
     width: 30%;
   }
   .content &gt; h1 {
-    font-size: 20px;
+    font-size: 18px;
+  }
+  .searchInput.isFocus {
+    width: 14vw;
+  }
+  .logo &gt; h1 {
+    font-size: 1.1em;
   }
 }
 @media only screen and (min-width: 910px) {
   .mat-sidenav {
     width: 20%;
   }
+  .searchInput.isFocus {
+    width: 14vw;
+  }
+  .logo &gt; h1 {
+    font-size: 1.2em;
+  }
 }
 
-.searchBar {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  width: 20%;
-  max-width: 200px;
-  min-width: 100px;
-  height: 25px;
-  border-radius: 8px;
-  padding: 5px;
+@media only screen and (min-height: 600px) {
+  .content {
+    margin-bottom: 16px;
+  }
+}
+@media only screen and (min-width: 1450px) {
+  .content {
+    margin: 16px;
+    margin-left: 3%;
+    right: 5%;
+    padding-bottom: 1.1vh;
+  }
+  .mat-sidenav {
+    width: 18%;
+    height: 85.5vh;
+  }
+  .content &gt; h1 {
+    display: none;
+  }
+  @media only screen and (max-height: 590px) {
+    .mat-sidenav {
+      height: 84vh;
+    }
+  }
 }
 </code></pre>
     </div>
@@ -846,7 +1011,7 @@ mat-sidenav-container {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><mat-toolbar class="toolbar">  <div class="logo">    <button      mat-icon-button      *ngIf="sidenav.mode === \'over\'"      (click)="sidenav.toggle()"    >      <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>      <mat-icon *ngIf="sidenav.opened"> close </mat-icon>    </button>    <h1 (click)="homeButton()">Daily News</h1>  </div>  <input    id="searchBar"    type="text"    class="searchBar"    placeholder="Search..."    (keyup)="onChange($event)"  /></mat-toolbar><mat-sidenav-container class="dashboard">  <mat-sidenav #sidenav="matSidenav">    <app-categories></app-categories>  </mat-sidenav>  <mat-sidenav-content>    <div class="content mat-elevation-z4">      <h1>{{ getCategory() | titlecase }}</h1>      <app-feed></app-feed>    </div>    <app-spinner></app-spinner>  </mat-sidenav-content></mat-sidenav-container></div>'
+        var COMPONENT_TEMPLATE = '<div><mat-toolbar class="toolbar">  <div class="logo">    <button      mat-icon-button      *ngIf="sidenav.mode === \'over\'"      (click)="sidenav.toggle()"    >      <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>      <mat-icon *ngIf="sidenav.opened"> close </mat-icon>    </button>    <h1 (click)="homeButton()">Daily News</h1>  </div>  <div class="searchBox" id="searchBox">    <input      id="inputFocus"      type="text"      class="searchInput"      placeholder="Search..."      (keyup)="onChange($event)"    />    <button class="searchButton" id="searchButton" (click)="isClicked()">      <i class="material-icons"> search </i>    </button>  </div></mat-toolbar><mat-sidenav-container class="dashboard">  <mat-sidenav #sidenav="matSidenav">    <app-categories></app-categories>  </mat-sidenav>  <mat-sidenav-content>    <div class="content mat-elevation-z4">      <h1>{{ getCategory() | titlecase }}</h1>      <app-feed></app-feed>    </div>    <app-spinner></app-spinner>  </mat-sidenav-content></mat-sidenav-container></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'CategoriesComponent', 'selector': 'app-categories'},{'name': 'FeedComponent', 'selector': 'app-feed'},{'name': 'SpinnerComponent', 'selector': 'app-spinner'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppComponent'};

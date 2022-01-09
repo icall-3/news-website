@@ -34,24 +34,7 @@ export class AppComponent {
     private observer: BreakpointObserver,
     private cardService: CardService,
     private searchService: SearchService
-  ) {
-    // btnDelete.addEventListener('click', function (e) {
-    //   e.preventDefault();
-    //   inputFocus.nodeValue = '';
-    // });
-    // inputFocus.addEventListener('click', function () {
-    //   this.classList.add('isFocus');
-    // });
-    // document.addEventListener('click', function (e) {
-    //   if (document.getElementById('inputFocus').classList.contains('isFocus')) {
-    //     inputFocus.classList.remove('isFocus');
-    //     console.log('Remove focus');
-    //   } else {
-    //     inputFocus.classList.add('isFocus');
-    //     console.log('Add focus');
-    //   }
-    // });
-  }
+  ) {}
 
   /**
    * Decides if the sidebar menu should be displayed or not depending on the width
@@ -102,16 +85,11 @@ export class AppComponent {
     this.searchService.searchTermObs.next(value);
   }
 
+  /**
+   * Method used to toggle searchbar view
+   */
+
   public isClicked() {
     document.getElementById('inputFocus').classList.toggle('isFocus');
   }
-
-  // public toggleClicked() {
-  //   if (sessionStorage.getItem('isClicked') == null) {
-  //     sessionStorage.setItem('isClicked', 'false');
-  //   } else if (sessionStorage.getItem('isClicked') == 'true') {
-  //     sessionStorage.setItem('isClicked', 'false');
-  //   } else sessionStorage.setItem('isClicked', 'true');
-  //   console.log('IsClicked ' + sessionStorage.getItem('isClicked'));
-  // }
 }

@@ -442,7 +442,6 @@ export class SpinnerComponent implements OnInit {
    */
   private toggleSpinner(state: boolean): void {
     const displayStatus &#x3D; state ? &#x27;block&#x27; : &#x27;none&#x27;;
-    console.log(state);
     this.spinnerComponent.style.display &#x3D; displayStatus;
   }
 }

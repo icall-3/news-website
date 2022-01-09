@@ -532,7 +532,7 @@ export class CardComponent implements OnInit {
    * Get method for the source of the article
    */
   get articleSource() {
-    return this.article &amp;&amp; this.article.source.name
+    return this.article &amp;&amp; this.article.source
       ? this.article.source.name
       : null;
   }
@@ -551,24 +551,27 @@ export class CardComponent implements OnInit {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;card&quot;&gt;
-  &lt;div class&#x3D;&quot;title&quot; (click)&#x3D;&quot;openUrl(article.url)&quot;&gt;
-    &lt;h1&gt;{{ articleTitle }}&lt;/h1&gt;
+  &lt;div class&#x3D;&quot;card-header&quot;&gt;
+    &lt;p class&#x3D;&quot;author&quot;&gt;{{ articleAuthor }} | {{ articleSource | uppercase }}&lt;/p&gt;
+    &lt;div class&#x3D;&quot;datetime&quot;&gt;
+      &lt;p class&#x3D;&quot;date&quot;&gt;
+        {{ articlePublishedAt | date: &quot;longDate&quot; | uppercase }}
+      &lt;/p&gt;
+      &lt;p class&#x3D;&quot;time&quot;&gt;
+        {{ articlePublishedAt | date: &quot;shortTime&quot; | uppercase }}
+      &lt;/p&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
+
   &lt;div class&#x3D;&quot;card-feed&quot;&gt;
     &lt;img class&#x3D;&quot;card-img&quot; [src]&#x3D;&quot;article.urlToImage&quot; /&gt;
-
     &lt;div class&#x3D;&quot;card-text&quot;&gt;
+      &lt;div class&#x3D;&quot;title&quot; (click)&#x3D;&quot;openUrl(article.url)&quot;&gt;
+        &lt;h1&gt;{{ articleTitle }}&lt;/h1&gt;
+      &lt;/div&gt;
       &lt;p class&#x3D;&quot;description&quot;&gt;
         {{ articleDescription }}
       &lt;/p&gt;
-      &lt;div class&#x3D;&quot;footer&quot;&gt;
-        &lt;p class&#x3D;&quot;author&quot;&gt;
-          {{ articleAuthor }} | {{ articleSource | uppercase }}
-        &lt;/p&gt;
-        &lt;p class&#x3D;&quot;date&quot;&gt;
-          {{ articlePublishedAt | date }}
-        &lt;/p&gt;
-      &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class&#x3D;&quot;extra&quot;&gt;&lt;/div&gt;
@@ -581,29 +584,46 @@ export class CardComponent implements OnInit {
                     <code>./card.component.css</code>
                 </p>
                 <pre class="line-numbers"><code class="language-scss">.card {
-  font-family: &quot;Times New Roman&quot;, Times, serif;
-  border-radius: 20px;
-  outline: solid rgb(0, 0, 0);
+  font-family: &quot;Poppins&quot;, sans-serif;
+  border-radius: 6px;
   outline-width: 1px;
   padding: 15px;
   margin-bottom: 10px;
-  background-color: #292929;
+  background-color: #2b2b2b;
 }
 .card:hover {
   transform: translateY(-0.5%);
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
 }
+.card-header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.datetime {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.date {
+  color: #707070;
+  margin-right: 10px;
+}
+.time {
+  color: #00749e;
+}
 .title {
   cursor: pointer;
+  margin-bottom: 4px;
 }
 .title:hover {
   text-decoration: underline;
 }
 .title &gt; h1 {
   margin-top: 5px;
-  font-family: &quot;PT Serif&quot;, serif;
   font-size: 20px;
-  color: #ffa31a;
+  color: #ffff;
+  line-height: 1.2;
 }
 .card-feed {
   display: flex;
@@ -612,37 +632,28 @@ export class CardComponent implements OnInit {
 }
 .card-text {
   font-size: 16px;
-  max-width: 50%;
+  max-width: 75%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  padding-right: 5px;
 }
 .card-img {
-  max-width: 50%;
-  max-height: 50%;
-  min-width: 40%;
-  max-width: 40%;
+  width: 230px;
+  max-height: 130px;
   object-fit: cover;
 }
 .author {
-  font-family: &quot;PT Serif&quot;, serif;
   font-style: normal;
-  color: #a1236d;
+  color: #707070;
   letter-spacing: 1px;
   font-size: 13px;
 }
 .description {
-  font-family: &quot;PT Serif&quot;, serif;
   font-style: normal;
-  color: #edf2f4;
+  color: #e0e6e9;
 }
-.date {
-  font-family: &quot;PT Serif&quot;, serif;
-  font-style: italic;
-  justify-content: flex-end;
-  color: #8d99ae;
-}
-@media only screen and (max-width: 500px) {
+
+@media only screen and (max-width: 600px) {
   .card-feed {
     flex-direction: column;
     justify-content: start;
@@ -665,8 +676,16 @@ export class CardComponent implements OnInit {
   .author {
     font-size: 10px;
   }
-  .date {
+  .card-header {
+    flex-direction: column-reverse;
+  }
+  .datetime {
     font-size: 12px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .card-header {
+    flex-direction: column-reverse;
   }
 }
 @media only screen and (min-width: 500px) {
@@ -679,7 +698,7 @@ export class CardComponent implements OnInit {
   .author {
     font-size: 12px;
   }
-  .date {
+  .datetime {
     font-size: 14px;
   }
 }
@@ -711,7 +730,7 @@ export class CardComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="card">  <div class="title" (click)="openUrl(article.url)">    <h1>{{ articleTitle }}</h1>  </div>  <div class="card-feed">    <img class="card-img" [src]="article.urlToImage" />    <div class="card-text">      <p class="description">        {{ articleDescription }}      </p>      <div class="footer">        <p class="author">          {{ articleAuthor }} | {{ articleSource | uppercase }}        </p>        <p class="date">          {{ articlePublishedAt | date }}        </p>      </div>    </div>  </div>  <div class="extra"></div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="card">  <div class="card-header">    <p class="author">{{ articleAuthor }} | {{ articleSource | uppercase }}</p>    <div class="datetime">      <p class="date">        {{ articlePublishedAt | date: "longDate" | uppercase }}      </p>      <p class="time">        {{ articlePublishedAt | date: "shortTime" | uppercase }}      </p>    </div>  </div>  <div class="card-feed">    <img class="card-img" [src]="article.urlToImage" />    <div class="card-text">      <div class="title" (click)="openUrl(article.url)">        <h1>{{ articleTitle }}</h1>      </div>      <p class="description">        {{ articleDescription }}      </p>    </div>  </div>  <div class="extra"></div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'CategoriesComponent', 'selector': 'app-categories'},{'name': 'FeedComponent', 'selector': 'app-feed'},{'name': 'SpinnerComponent', 'selector': 'app-spinner'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'CardComponent'};

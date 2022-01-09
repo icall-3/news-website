@@ -10,6 +10,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./categories.component.css'],
 })
 export class CategoriesComponent implements OnInit {
+  /**
+   * String used to store category title
+   */
   private category: string;
 
   /**
@@ -39,17 +42,21 @@ export class CategoriesComponent implements OnInit {
     this.setCategory(category);
     window.location.reload();
   }
-
+  /**
+   * Method used to store the category title in session storage
+   */
   public setCategory(category: string) {
     this.category = category;
     sessionStorage.setItem('category', category);
   }
+  /**
+   * Method used to get the stored category title from session storage
+   */
   public getCategory() {
     if (sessionStorage.getItem('category') == null) {
       this.category = 'general';
       console.log('session storage null');
     } else this.category = sessionStorage.getItem('category');
-    console.log(this.category);
     document.getElementById(this.category).style.color = '#00b9ff';
   }
 }

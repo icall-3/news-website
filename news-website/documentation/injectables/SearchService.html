@@ -130,7 +130,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/search.service.ts:40</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/search.service.ts:41</a></div>
                             </td>
                         </tr>
 
@@ -202,8 +202,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="54"
-                            class="link-to-prism">src/app/search.service.ts:54</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="55"
+                            class="link-to-prism">src/app/search.service.ts:55</a></div>
                 </td>
             </tr>
 
@@ -297,8 +297,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="31"
-                            class="link-to-prism">src/app/search.service.ts:31</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">src/app/search.service.ts:32</a></div>
                 </td>
             </tr>
 
@@ -379,7 +379,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/search.service.ts:24</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/search.service.ts:25</a></div>
                         </td>
                     </tr>
 
@@ -398,7 +398,8 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { SpinnerService } from &#x27;./spinner/spinner.service&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { FeedComponent } from &#x27;./feed/feed.component&#x27;;
+import { SpinnerService } from &#x27;./spinner/spinner.service&#x27;;
 import { Injectable } from &#x27;@angular/core&#x27;;
 import {
   BehaviorSubject,
@@ -457,11 +458,20 @@ export class SearchService {
         if (!term) {
           return articles;
         }
+        while (term.startsWith(&#x27; &#x27;, 0)) {
+          term &#x3D; term.trimStart();
+        }
+        while (term.endsWith(&#x27; &#x27;)) {
+          term &#x3D; term.trimEnd();
+        }
         const result &#x3D; articles.filter((article: Article) &#x3D;&gt; {
           term &#x3D; term.toLowerCase();
           const title &#x3D; article.title.toLowerCase();
           return title.includes(term.toString());
         });
+        if (result.length &#x3D;&#x3D; 0) {
+          return articles;
+        }
         return result;
       })
     );
