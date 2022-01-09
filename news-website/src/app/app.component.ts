@@ -86,6 +86,9 @@ export class AppComponent {
    */
   public getCategory(): string {
     var category = this.cardService.getUrl().split(/&category=|&/);
+    if (category[1] == 'health') {
+      category[1] += 'care';
+    }
     return category[1];
   }
 
