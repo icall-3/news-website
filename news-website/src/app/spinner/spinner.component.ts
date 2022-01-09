@@ -37,7 +37,6 @@ export class SpinnerComponent implements OnInit {
    */
   private toggleSpinner(state: boolean): void {
     const displayStatus = state ? 'block' : 'none';
-    console.log(state);
     this.spinnerComponent.style.display = displayStatus;
   }
 }

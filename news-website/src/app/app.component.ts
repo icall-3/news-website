@@ -99,7 +99,6 @@ export class AppComponent {
   public onChange(event: Event): void {
     const target = event.target;
     const value = (target as any).value;
-    console.log(value);
     this.searchService.searchTermObs.next(value);
   }
 
