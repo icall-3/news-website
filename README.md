@@ -25,6 +25,13 @@ To run this project navigate with a CLI of your choice into the parent folder of
 
 Navigate to `http://localhost:4200/` in a browser of your choice. The app will automatically reload if you change any of the source files.
 
+# Unit testing
+
+Unit testing and task runner are added by default to an Angular project.
+By default, the tests are executed in Chrome and you can run them with `ng test`.  
+In order to run the tests in Firefox (or in any other browser) you need to install the dependencies for karma task runner with `npm install karma-firefox-launcher --save-dev` (for other browser replace the browser name). Once you installed it, add Firefox to the browser list in the `karma.conf.js` file so you will have for the plugins `require("karma-firefox-launcher")`, and `browsers: ["Chrome", "Firefox"]`, and then simply run the test with `ng test`.  
+Of course, for this you will need to have Firefox installed on your computer.
+
 # Documentation
 
 In order to generate technical documentation we will use the [Compodoc](https://compodoc.app/) tool. To install it, you need to run the `npm install --save-dev @compodoc/compodoc` command in the parent folder of the project. After the installation is complete, just run the `npm run compodoc` command and access `http://127.0.0.1:8080/` in a browser of your choice, where you can find the generated documentation.
